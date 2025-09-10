@@ -5,6 +5,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+import PureCounter from "@srexi/purecounterjs";
 
 (function() {
   "use strict";
