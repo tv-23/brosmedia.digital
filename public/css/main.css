@@ -53,7 +53,7 @@
     /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
     --nav-dropdown-color: #555555;
     /* Used for navigation links of the dropdown items in the navigation menu. */
-    --nav-dropdown-hover-color: #036dda;
+    --nav-dropdown-hover-color: #e30f29;
     /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
@@ -210,7 +210,7 @@ h6 {
 .header .btn-getstarted,
 .header .btn-getstarted:focus {
     color: var(--contrast-color);
-    background: var(--accent-color);
+    background: var(--nav-dropdown-hover-color);
     font-size: 17px;
     font-weight: 500;
     padding: 8px 25px;
@@ -251,7 +251,7 @@ h6 {
 ------------------------------*/
 
 .scrolled .header {
-    --background-color: #000000;
+    --background-color: #0a0f4f;
 }
 
 
@@ -308,7 +308,7 @@ h6 {
         content: "";
         position: absolute;
         height: 2px;
-        bottom: -15px;
+        bottom: -5px;
         left: 0;
         background-color: var(--nav-dropdown-hover-color);
         visibility: hidden;
