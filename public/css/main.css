@@ -27,11 +27,11 @@
 :root {
     --background-color: #ffffff;
     /* Background color for the entire website, including individual sections */
-    --default-color: #555555;
+    --default-color: #0a0f4f;
     /* Default color used for the majority of the text content across the entire website */
     --heading-color: #0d3035;
     /* Color for headings, subheadings and title throughout the website */
-    --accent-color: #036dda;
+    --accent-color: #e30f29;
     /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
     --surface-color: #ffffff;
     /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
@@ -507,7 +507,7 @@ h6 {
 }
 
 .footer .footer-newsletter {
-    background-color: color-mix(in srgb, var(--default-color), transparent 97%);
+    background-color: color-mix(in srgb,#0a0f4f, transparent 50%);
     padding: 50px 0;
 }
 
@@ -562,6 +562,7 @@ h6 {
 
 .footer .footer-top {
     padding-top: 50px;
+    background-color: #0a0f4f;
 }
 
 .footer .social-links a {
@@ -639,6 +640,7 @@ h6 {
 }
 
 .footer .copyright {
+    background-color: #0a0f4f;
     padding: 25px 0;
     border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
