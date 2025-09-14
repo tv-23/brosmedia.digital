@@ -1339,7 +1339,7 @@ section,
 
 .services .service-item {
     position: relative;
-    padding: 60px 30px 80px;
+    padding: 40px 30px 55px;
     background-color: var(--surface-color);
     border-radius: 12px;
     box-shadow: 0 10px 25px color-mix(in srgb, var(--default-color), transparent 90%);
