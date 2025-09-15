@@ -1,4 +1,107 @@
-<header id="header" class="header d-flex align-items-center sticky-top">
+<header id="header" class="header d-flex flex-column sticky-top">
+    <!-- Top Bar inside Header -->
+    <div id="topbar" class="topbar d-flex align-items-center w-100">
+        <div
+            class="container-fluid container-xl d-flex justify-content-between"
+        >
+            <!-- Top bar row -->
+            <div class="row w-100">
+                <div class="col-12" style="padding: 0;">
+                    <div
+                        class="top-bar d-flex justify-content-between align-items-center py-2 px-3 text-white"
+                        style="padding-right: 0px !important;"
+                    >
+                        <div
+                            class="top-bar-left d-flex align-items-center gap-3"
+                        >
+                            <!-- Contact email with Gmail compose link, hidden on mobile and tablet -->
+                            <span
+                                class="d-none d-lg-flex align-items-center"
+                                id="contact-email"
+                            >
+                                <i
+                                    class="bi bi-envelope me-1"
+                                    aria-hidden="true"></i>
+                                <a
+                                    href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@brosmedia.ma"
+                                    target="_blank"
+                                    class="text-white text-decoration-none hover:text-gray-300"
+                                    aria-label="Email us at contact@brosmedia.ma"
+                                >
+                                    contact@brosmedia.ma
+                                </a>
+                            </span>
+                            <!-- Business hours, hidden on mobile and tablet -->
+                            <span
+                                class="d-none d-lg-flex align-items-center"
+                                id="business-hours"
+                            >
+                                <i
+                                    class="bi bi-clock-history me-1"
+                                    aria-hidden="true"></i>
+                                Lundi-Samedi: 10h30 - 18h00
+                            </span>
+                        </div>
+                        <div
+                            class="top-bar-right d-flex align-items-center gap-2 nowrap"
+                        >
+                            <!-- Social media links, visible on all devices -->
+                            <span
+                                class="d-flex align-items-center"
+                                id="social-media-links"
+                            >
+                                <span class="d-none d-lg-block">
+                                    Suivez-nous sur:
+                                </span>
+                                <a
+                                    href="https://www.facebook.com/BROSMEDIA.PRODUCTION"
+                                    class="ms-2 text-white hover:text-gray-300"
+                                    aria-label="Follow us on Facebook"
+                                    target="_blank"
+                                >
+                                    <i class="bi bi-facebook"></i>
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/brosmedia.digital"
+                                    class="ms-2 text-white hover:text-gray-300"
+                                    aria-label="Follow us on Twitter"
+                                    target="_blank"
+                                >
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                                <a
+                                    href="https://ma.linkedin.com/company/brosmedia-sarl"
+                                    class="ms-2 text-white hover:text-gray-300"
+                                    aria-label="Follow us on LinkedIn"
+                                    target="_blank"
+                                >
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </span>
+                            <!-- Contact phone, visible on all devices -->
+                            <span
+                                class="d-flex align-items-center ms-3"
+                                id="contact-phone"
+                            >
+                                <span class="d-none d-lg-block me-1">
+                                    Appelez-nous:
+                                </span>
+                                <a
+                                    href="tel:+212671884968"
+                                    class="text-white text-decoration-none hover:text-gray-300"
+                                    aria-label="Call us at +1 234 567 890"
+                                >
+                                    (+212) 671884968
+                                </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Header -->
     <div
         class="container-fluid container-xl position-relative d-flex align-items-center"
     >
@@ -13,35 +116,30 @@
             <ul>
                 <li><a href="/" class="active">Accueil</a></li>
                 <li class="dropdown">
-                    <a href="#">
-                        <span>Solutions</span>
-                        <i class="bi bi-chevron-down toggle-dropdown"></i>
-                    </a>
+                    <a href="#"
+                        ><span>Solutions</span><i
+                            class="bi bi-chevron-down toggle-dropdown"></i></a
+                    >
                     <ul>
                         <li>
                             <a href="/logiciel-de-gestion-de-chantier-btp"
-                                >Logiciel de gestion de chantier BTP</a
-                            >
+                                >Logiciel de gestion de chantier BTP</a>
                         </li>
                         <li>
                             <a href="/logiciel-de-gestion-commerciale"
-                                >Logiciel de gestion commerciale</a
-                            >
+                                >Logiciel de gestion commerciale</a>
                         </li>
                         <li>
                             <a href="/logiciel-de-reservation-hoteliere"
-                                >Logiciel de réservation hôtelière</a
-                            >
+                                >Logiciel de réservation hôtelière</a>
                         </li>
                         <li>
                             <a href="/logiciel-de-gestion-de-club-sportif"
-                                >Logiciel de gestion de club sportif</a
-                            >
+                                >Logiciel de gestion de club sportif</a>
                         </li>
                         <li>
                             <a href="/logiciel-de-gestion-de-facturation"
-                                >Logiciel de gestion de facturation</a
-                            >
+                                >Logiciel de gestion de facturation</a>
                         </li>
                     </ul>
                 </li>
