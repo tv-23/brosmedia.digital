@@ -1,0 +1,225 @@
+/* Desktop layout (side by side) */
+#services .desktop-layout .card-carousel {
+    min-height: 500px;
+    overflow: hidden;
+    position: relative;
+    padding: 15px;
+}
+
+#services .desktop-layout .cards-wrapper {
+    transition: transform 0.5s ease;
+}
+
+#services .desktop-layout .card-item {
+   
+    border: none;
+   
+}
+
+#services .desktop-layout .card-item:not(.active) {
+    display: none !important;
+}
+
+#services .desktop-layout .image-display {
+    height: 500px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+}
+
+/* Mobile layout (stacked) */
+#services .mobile-layout {
+    display: none;
+}
+
+#services .mobile-layout .card-item {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    background: linear-gradient(to right, #f8f9fa, #e9f1ff);
+}
+
+#services .mobile-layout .card-image {
+    height: 250px;
+    overflow: hidden;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#services .mobile-layout .card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#services .carousel-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: opacity 0.5s ease;
+}
+
+#services .btn-primary {
+    background: linear-gradient(to right, #0d6efd, #0a58ca);
+    border: none;
+    border-radius: 30px;
+    padding: 8px 20px;
+    font-weight: 600;
+    box-shadow: 0 0.2rem 0.5rem rgba(13, 110, 253, 0.4);
+}
+
+#services .btn-primary:hover {
+    background: linear-gradient(to right, #0a58ca, #084298);
+    transform: translateY(-2px);
+    box-shadow: 0 0.3rem 0.8rem rgba(13, 110, 253, 0.5);
+}
+
+#services .card-title {
+    color: #212529;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+#services .card-text {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+#services .nav-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#services .dot {
+    width: 12px;
+    height: 12px;
+    background-color: #dee2e6;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#services .dot.active {
+    background-color: #0a0f4f;
+    transform: scale(1.3);
+}
+
+#services .prev-section {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    margin-top: 2rem;
+    box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
+    display: none;
+}
+
+#services .prev-section.visible {
+    display: block;
+    animation: fadeIn 0.5s ease;
+}
+
+#services .section-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+#services .end-message {
+    text-align: center;
+    padding: 1rem;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: white;
+    border-radius: 10px;
+    margin-top: 1rem;
+    display: none;
+    animation: pulse 2s infinite;
+}
+
+#services .end-message.visible {
+    display: block;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.6;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    #services .desktop-layout {
+        display: none;
+    }
+
+    #services .mobile-layout {
+        display: block;
+    }
+
+    #services .desktop-layout .card-carousel,
+    #services .desktop-layout .image-display {
+        height: 400px;
+    }
+
+    #services .desktop-layout .card-item {
+        height: 140px;
+    }
+}
+
+@media (max-width: 768px) {
+    #services .desktop-layout .card-carousel {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+
+    #services .desktop-layout .image-display {
+        height: 300px;
+    }
+
+    #services .desktop-layout .card-item {
+        height: 120px;
+    }
+
+    #services .mobile-layout .card-image {
+        height: 200px;
+    }
+}
+
+article.service-item .bi-check-square-fill {
+    color:#e30f29;
+}
+
+article.service-item p {
+    margin-bottom: 15px !important;
+    color: black !important;
+    font-size: 17px;
+    font-weight: 400;
+}
