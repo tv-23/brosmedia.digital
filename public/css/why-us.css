@@ -26,8 +26,8 @@
 
   .cube {
     position: absolute !important;
-    width: 250px !important;
-    height: 250px !important;
+    width: 200px !important;
+    height: 200px !important;
     background: #f11203 !important;
     color: #fff !important;
     border-radius: 12px !important;
@@ -51,14 +51,22 @@
   .cube p {
     margin: 0;
     font-size: 16px;
-    text-align: start
+    text-align: justify
+  }
+
+  .cube .card-body {
+    padding: 0 !important;
+  }
+
+  .cube .card-body h3 {
+    margin-bottom: 15px !important;
   }
 
 
   @media (max-width: 768px) {
     .cube {
-      width: 200px !important;
-      height: 200px !important;
+      width: 175px !important;
+      height: 175px !important;
     }
 
     .cube p {
@@ -69,4 +77,11 @@
       font-size: 20px
     }
 
+     .design-container {
+      height: 135vh;
+     }
+
+       #why-us {
+    height: 165vh;
+       }
   }

@@ -3,7 +3,7 @@ const pointsDesktop = [
 ];
 
 const pointsMobileTablet = [
-  { x: 25, y: 15 }, { x: 30, y: 60 }, { x: 50, y: 20 }, { x: 70, y: 60 }, { x: 90, y: 30 }
+  { x: 25, y: 15 }, { x: 75, y: 25 }, { x: 25, y: 45 }, { x: 70, y: 65 }, { x: 50, y: 85 }
 ];
 
 let corePoints;
@@ -38,10 +38,25 @@ const cubeEls = [];
 cubeData.forEach(d => {
   const el = document.createElement('div');
   el.className = 'cube card border-0';
-  el.innerHTML = `
+//   if (window.innerWidth >= 1024) {
+//  el.innerHTML = `
+//     <div class="card-body text-center">
+//       <h5 class="card-title fw-bold mb-2">${d.title}</h5>
+//       <br>
+//       <p class="card-text">${d.desc}</p>
+//     </div>
+//   `;
+//   }else{
+//  el.innerHTML = `
+//     <div class="card-body text-center">
+//       <h5 class="card-title fw-bold mb-2">${d.title}</h5>
+    
+//     </div>
+//   `;
+//   }
+ el.innerHTML = `
     <div class="card-body text-center">
-      <h5 class="card-title fw-bold mb-2">${d.title}</h5>
-      <br>
+      <h3 class="card-title fw-bold mb-2">${d.title}</h3>
       <p class="card-text">${d.desc}</p>
     </div>
   `;
