@@ -12,18 +12,6 @@
     background-color: #0a0f4f;
 }
 
-/* Angled edges (kept) */
-.testimonial-section::before,
-.testimonial-section::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 60px;
-    background: var(--bg);
-    z-index: 2;
-    left: 0;
-}
-
 .testimonial-section::before {
     top: -30px;
     transform: skewY(-2deg);
