@@ -6,10 +6,14 @@
       --active-bg: #e30f29; /* red for logos */
     }
 
+#testimonial-section {
+    background-color: #0a0f4f;
+        padding: 50px 0;
+}
+
 .testimonial-section {
     padding: 5rem 0;
     position: relative;
-    background-color: #0a0f4f;
 }
 
 .testimonial-section::before {
@@ -31,8 +35,8 @@
 }
 
 .profile-image {
-    width: 300px;
-    height: 300px;
+    width: 350px;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
     position: relative;
@@ -41,45 +45,7 @@
     transition: opacity 0.35s ease;
 }
 
-.orange-circle {
-    position: absolute;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    background: #FF6B35;
-    top: -20px;
-    left: -10px;
-    z-index: 2;
-    transition: all .35s ease;
-}
 
-.blue-shape {
-    position: absolute;
-    width: 180px;
-    height: 180px;
-    background: #4285F4;
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    bottom: -30px;
-    right: -20px;
-    z-index: 1;
-    transition: all .35s ease;
-}
-
-.chart-overlay {
-    position: absolute;
-    bottom: 40px;
-    right: 30px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 8px;
-    padding: 8px;
-    width: 80px;
-    height: 40px;
-    z-index: 4;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-}
 
 .chart-line {
     height: 2px;
@@ -171,7 +137,9 @@
     transform: translateY(-50%);
     z-index: 0;
 }
-
+h2#testimonial-quote {
+    color: white;
+}
 /* progress line (white) that starts exactly at first logo center */
 .logo-line {
     position: absolute;
@@ -217,17 +185,6 @@
         width: 250px;
         height: 250px;
     }
-
-    .orange-circle {
-        width: 90px;
-        height: 90px;
-    }
-
-    .blue-shape {
-        width: 140px;
-        height: 140px;
-    }
-
     .quote-text {
         font-size: 1.5rem;
     }
