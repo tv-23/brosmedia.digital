@@ -1,0 +1,257 @@
+ :root {
+      --bg: #000;
+      --muted: #aaa;
+      --white: #fff;
+      --line: #fff; /* progress line color */
+      --active-bg: #e30f29; /* red for logos */
+    }
+
+.testimonial-section {
+    padding: 5rem 0;
+    position: relative;
+    background-color: #0a0f4f;
+}
+
+/* Angled edges (kept) */
+.testimonial-section::before,
+.testimonial-section::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: var(--bg);
+    z-index: 2;
+    left: 0;
+}
+
+.testimonial-section::before {
+    top: -30px;
+    transform: skewY(-2deg);
+}
+
+.testimonial-section::after {
+    bottom: -30px;
+    transform: skewY(2deg);
+}
+
+/* Profile image + shapes */
+.profile-container {
+    position: relative;
+    width: 380px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.profile-image {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: relative;
+    z-index: 3;
+    border: 8px solid rgba(255, 255, 255, 0.06);
+    transition: opacity 0.35s ease;
+}
+
+.orange-circle {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #FF6B35;
+    top: -20px;
+    left: -10px;
+    z-index: 2;
+    transition: all .35s ease;
+}
+
+.blue-shape {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: #4285F4;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    bottom: -30px;
+    right: -20px;
+    z-index: 1;
+    transition: all .35s ease;
+}
+
+.chart-overlay {
+    position: absolute;
+    bottom: 40px;
+    right: 30px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 8px;
+    padding: 8px;
+    width: 80px;
+    height: 40px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.chart-line {
+    height: 2px;
+    background: #34A853;
+    margin: 0 1px;
+    flex: 1;
+    position: relative;
+}
+
+.chart-line:before {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 8px;
+    background: #34A853;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Text content */
+.uppercase-heading {
+    font-size: .875rem;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--muted);
+    transition: opacity .35s;
+}
+
+.quote-text {
+    font-size: 2.25rem;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 2rem;
+    transition: opacity .35s;
+}
+
+.person-name {
+    font-weight: 700;
+    margin-bottom: .25rem;
+    transition: opacity .35s;
+}
+
+.person-title {
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    transition: opacity .35s;
+}
+
+.case-study-link {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 500;
+    transition: all .3s;
+}
+
+.case-study-link:hover {
+    text-decoration: underline;
+    color: var(--white);
+}
+
+/* Logo section */
+.logo-section {
+    margin-top: 4rem;
+    padding-top: 3rem;
+    border-top: 1px solid #333;
+    position: relative;
+}
+
+.logo-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 2rem 0;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* background connecting line (grey) */
+.logo-bg-line {
+    position: absolute;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.08);
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+/* progress line (white) that starts exactly at first logo center */
+.logo-line {
+    position: absolute;
+    height: 4px;
+    background: var(--line);
+    top: 50%;
+    z-index: 1;
+    transform: translateY(-50%);
+    width: 0;
+    left: 0;
+    transition: width .35s ease, left .35s ease;
+    border-radius: 3px;
+}
+
+.logo-item {
+    background-color: #333;
+    color: var(--white);
+    padding: 0.55rem 0.95rem;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    transition: background .25s, transform .15s;
+    min-width: 90px;
+    text-align: center;
+}
+
+.logo-item:hover {
+    transform: translateY(-4px);
+}
+
+.logo-item.active {
+    background-color: var(--active-bg);
+}
+
+/* small responsive */
+@media (max-width: 576px) {
+    .profile-image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .orange-circle {
+        width: 90px;
+        height: 90px;
+    }
+
+    .blue-shape {
+        width: 140px;
+        height: 140px;
+    }
+
+    .quote-text {
+        font-size: 1.5rem;
+    }
+
+    .logo-item {
+        min-width: 70px;
+        padding: .4rem .6rem;
+    }
+}
+
+/* fade utility (opacity transitions) */
+.fade-target {
+    transition: opacity .35s ease;
+    opacity: 1;
+}
