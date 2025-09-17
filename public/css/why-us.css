@@ -1,47 +1,72 @@
   #why-us {
-    background-color: #0b0c45;
     position: relative;
+    height: 110vh;
     overflow: hidden;
   }
 
-  .fake-scroll {
-    height: 2000px; /* scroll height inside the section */
-  }
-
+  /* just viewport height so we "arrive" then lock */
   .design-container {
-  position: sticky; /* stay fixed while section scrolls */
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105vh;
+    pointer-events: none;
+    z-index: 10;
+    background-color: #0a0f4f;
   }
 
   .line {
     position: absolute;
     height: 4px;
-    background: white;
+    background: #fff;
     transform-origin: left center;
     z-index: 1;
   }
 
   .cube {
-    position: absolute;
-    width: 200px;
-    height: 200px;
-    background: red;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    border-radius: 12px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+    position: absolute !important;
+    width: 250px !important;
+    height: 250px !important;
+    background: #f11203 !important;
+    color: #fff !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 1rem !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .4) !important;
+    transform: translate(-50%, -50%) !important;
     opacity: 0;
-    transition: opacity 0.3s ease;
-    pointer-events: auto;
-    z-index: 2;
-    transform: translate(-50%, -50%);
+    z-index: 2 !important;
+    border-radius: 0 !important;
+  }
+
+  .cube h3 {
+    margin: 0 0 .4rem;
+    font-size: 24px
+  }
+
+  .cube p {
+    margin: 0;
+    font-size: 16px;
+    text-align: start
+  }
+
+
+  @media (max-width: 768px) {
+    .cube {
+      width: 200px !important;
+      height: 200px !important;
+    }
+
+    .cube p {
+      font-size: 14px;
+    }
+
+    .cube h3 {
+      font-size: 20px
+    }
+
   }
