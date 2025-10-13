@@ -1,0 +1,84 @@
+---
+import Layout from "../layouts/Layout.astro";
+import StarterPage from "../components/starter-page.astro";
+
+const benefits = [
+    {
+        text: "Gestion simple des adhésions et paiements",
+        icon: "bi-credit-card", // or "bi-wallet2"
+    },
+    {
+        text: "Vision claire sur la trésorerie", 
+        icon: "bi-eye", // or "bi-graph-up"
+    },
+    {
+        text: "Communication fluide avec les membres",
+        icon: "bi-chat-dots", // or "bi-people"
+    },
+    {
+        text: "Gain de temps administratif",
+        icon: "bi-clock", // or "bi-lightning"
+    },
+];
+
+const hero = [
+    {
+        text: "Gérez votre club sans effort",
+        description:
+            "Simplifiez l’administration, les adhésions, les paiements et la communication avec vos membres.",
+    },
+];
+
+const features = [
+    {
+        feature: "Tableau de bord",
+        desc: "Vue complète sur les membres et la trésorerie.",
+        icon: "bi-speedometer2", // or "bi-bar-chart-line"
+    },
+    {
+        feature: "Types de sports",
+        desc: "Configuration flexible de vos activités.",
+        icon: "bi-gear-wide-connected", // or "bi-trophy"
+    },
+    {
+        feature: "Frais d'adhésion",
+        desc: "Gestion automatisée des paiements.",
+        icon: "bi-credit-card", // or "bi-cash-coin"
+    },
+    {
+        feature: "Trésorerie",
+        desc: "Suivi des entrées et sorties.",
+        icon: "bi-cash-stack", // or "bi-graph-up"
+    },
+    {
+        feature: "Membres",
+        desc: "Historique, abonnements et communication.",
+        icon: "bi-people", // or "bi-person-lines-fill"
+    },
+];
+
+const why = [
+    {
+        sectionTitle: "Pourquoi choisir notre solution club",
+        items: [
+            "Adaptée à tous types de clubs sportifs",
+            "Interface intuitive et mobile-friendly", 
+            "Support réactif et personnalisé",
+        ],
+    },
+];
+const cta = "Digitalisez votre club dès aujourd’hui !";
+---
+
+<Layout>
+    <main class="main">
+        <StarterPage
+            title="Logiciel de gestion de club sportif"
+            benefits={benefits}
+            hero={hero}
+            features={features}
+            why={why}
+            cta = {cta}
+        />
+    </main>
+</Layout>

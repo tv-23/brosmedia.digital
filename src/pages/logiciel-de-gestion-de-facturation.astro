@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+import StarterPage from "../components/starter-page.astro";
+
+const benefits = [
+    {
+        text: "Facturation rapide et sans erreur",
+        icon: "bi-lightning", // or "bi-receipt"
+    },
+    {
+        text: "Suivi en temps réel des paiements", 
+        icon: "bi-eye", // or "bi-graph-up"
+    },
+    {
+        text: "Meilleure organisation client",
+        icon: "bi-people", // or "bi-person-gear"
+    },
+    {
+        text: "Gain de temps administratif",
+        icon: "bi-clock", // or "bi-gear"
+    },
+];
+
+const hero = [
+    {
+        text: "Simplifiez votre facturation professionnelle",
+        description:
+            "Créez, envoyez et suivez vos factures en toute simplicité, avec un suivi précis de vos clients et produits.",
+    },
+];
+
+const features = [
+    {
+        feature: "Tableau de bord",
+        desc: "Aperçu des paiements et revenus.",
+        icon: "bi-speedometer2", // or "bi-bar-chart-line"
+    },
+    {
+        feature: "Clients",
+        desc: "Centralisation des informations et historique.",
+        icon: "bi-people", // or "bi-person-lines-fill"
+    },
+    {
+        feature: "Produits",
+        desc: "Gestion des articles et tarifs.",
+        icon: "bi-box", // or "bi-tags"
+    },
+    {
+        feature: "Factures",
+        desc: "Création et envoi automatisés.",
+        icon: "bi-receipt", // or "bi-envelope"
+    },
+];
+
+const why = [
+    {
+        sectionTitle: "Pourquoi choisir notre solution de facturation",
+        items: [
+            "Sécurité et conformité garanties",
+            "Interface simple et intuitive", 
+            "Accessible sur tous les appareils",
+        ],
+    },
+];
+
+const cta = "Gagnez du temps et automatisez votre facturation !";
+---
+
+<Layout>
+    <main class="main">
+        <StarterPage
+            title="Logiciel de gestion de facturation"
+            benefits={benefits}
+            hero={hero}
+            features={features}
+            why={why}
+            cta = {cta}
+        />
+    </main>
+</Layout>

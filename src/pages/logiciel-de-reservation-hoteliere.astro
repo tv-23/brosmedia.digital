@@ -1,0 +1,90 @@
+---
+import Layout from "../layouts/Layout.astro";
+import StarterPage from "../components/starter-page.astro";
+
+const benefits = [
+    {
+        text: "Réservations et finances centralisées",
+        icon: "bi-building", // or "bi-house-gear"
+    },
+    {
+        text: "Suivi précis des performances", 
+        icon: "bi-graph-up", // or "bi-bar-chart-line"
+    },
+    {
+        text: "Facturation automatisée",
+        icon: "bi-receipt", // or "bi-file-earmark-text"
+    },
+    {
+        text: "Meilleure expérience client",
+        icon: "bi-emoji-smile", // or "bi-star"
+    },
+];
+
+const hero = [
+    {
+        text: "Simplifiez la gestion de votre hôtel ou riad",
+        description:
+            "Gérez vos réservations, chambres, clients et factures depuis une interface unique et intuitive.",
+    },
+];
+
+const features = [
+    {
+        feature: "Tableau de bord",
+        desc: "Vue globale sur les réservations et revenus.",
+        icon: "bi-speedometer2", // or "bi-bar-chart-line"
+    },
+    {
+        feature: "Chambres",
+        desc: "Gestion des disponibilités et tarifs.",
+        icon: "bi-door-closed", // or "bi-house"
+    },
+    {
+        feature: "Clients",
+        desc: "Historique et préférences personnalisées.",
+        icon: "bi-person-badge", // or "bi-person-lines-fill"
+    },
+    {
+        feature: "Finances",
+        desc: "Suivi des paiements, taxes et extras.",
+        icon: "bi-cash-stack", // or "bi-currency-euro"
+    },
+    {
+        feature: "Factures",
+        desc: "Génération automatique.",
+        icon: "bi-receipt", // or "bi-file-earmark-text"
+    },
+    {
+        feature: "Bilan",
+        desc: "Rapports d'occupation et de rentabilité.",
+        icon: "bi-graph-up-arrow", // or "bi-clipboard-data"
+    },
+];
+
+const why = [
+    {
+        sectionTitle: "Pourquoi choisir notre solution hôtelière",
+        items: [
+            "Compatible avec tout type d'hébergement",
+            "Interface multilingue et responsive", 
+            "Sécurité et fiabilité garanties",
+        ],
+    },
+];
+
+const cta = "Optimisez la gestion de votre établissement dès maintenant !";
+---
+
+<Layout>
+    <main class="main">
+        <StarterPage
+            title="Logiciel de réservation hôtelière"
+            benefits={benefits}
+            hero={hero}
+            features={features}
+            why={why}
+            cta = {cta}
+        />
+    </main>
+</Layout>

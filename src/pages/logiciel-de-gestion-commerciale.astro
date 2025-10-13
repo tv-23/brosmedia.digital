@@ -1,0 +1,85 @@
+---
+import Layout from "../layouts/Layout.astro";
+import StarterPage from "../components/starter-page.astro";
+
+const benefits = [
+    {
+        text: "Vue complète sur la performance commerciale",
+        icon: "bi-graph-up-arrow", // or "bi-bar-chart-line"
+    },
+    {
+        text: "Meilleur contrôle des coûts et marges", 
+        icon: "bi-currency-euro", // or "bi-cash-stack"
+    },
+    {
+        text: "Relation client-fournisseur optimisée",
+        icon: "bi-people-fill",
+    },
+    {
+        text: "Processus simplifiés et gain de temps",
+        icon: "bi-lightning-charge", // or "bi-speedometer2"
+    },
+];
+
+const hero = [
+    {
+        text: "Boostez vos ventes et simplifiez vos opérations",
+        description:
+            "Centralisez la gestion de vos produits, clients, achats et factures pour développer votre activité plus rapidement.",
+    },
+];
+
+const features = [
+    {
+        feature: "Tableau de bord",
+        desc: "Suivi global des ventes et achats.",
+        icon: "bi-speedometer2", // or "bi-bar-chart-line"
+    },
+    {
+        feature: "Produits",
+        desc: "Catalogue complet avec prix et stocks.",
+        icon: "bi-box-seam", // or "bi-tags"
+    },
+    {
+        feature: "Achats & Ventes",
+        desc: "Traçabilité complète des transactions.",
+        icon: "bi-arrow-left-right", // or "bi-graph-up-arrow"
+    },
+    {
+        feature: "Factures",
+        desc: "Génération et suivi automatisé.",
+        icon: "bi-receipt", // or "bi-file-earmark-text"
+    },
+    {
+        feature: "Clients & Fournisseurs",
+        desc: "Gestion CRM intégrée.",
+        icon: "bi-people-fill", // or "bi-person-lines-fill"
+    },
+];
+
+const why = [
+    {
+        sectionTitle: "Pourquoi choisir notre solution commerciale",
+        items: [
+            "Outil flexible adapté à tout type d'entreprise",
+            "Analyse en temps réel pour de meilleures décisions", 
+            "Interface fluide et intuitive",
+        ],
+    },
+];
+
+const cta = "Passez à une gestion commerciale moderne.";
+---
+
+<Layout>
+    <main class="main">
+        <StarterPage
+            title="Logiciel de gestion commerciale"
+            benefits={benefits}
+            hero={hero}
+            features={features}
+            why={why}
+            cta = {cta}
+        />
+    </main>
+</Layout>

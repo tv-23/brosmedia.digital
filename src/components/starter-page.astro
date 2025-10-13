@@ -1,17 +1,169 @@
 ---
-const { title,description } = Astro.props; 
+export interface Props {
+    title: string;
+    description?: string;
+    benefits: Array<{
+        text: string;
+        icon?: string;
+    }>;
+    hero: Array<{
+        text: string;
+        description: string;
+    }>;
+    features: Array<{
+        feature: string;
+        desc: string;
+        icon: string;
+    }>;
+    why: Array<{
+        sectionTitle: string;
+        items: Array<string>;
+    }>;
+    cta: string;
+}
+
+const { title, description, benefits, hero, features, why, cta } = Astro.props;
 ---
-<div class="page-title dark-background">
+
+<div class="page-title">
     <div class="container position-relative">
         <h1>{title}</h1>
-        <p>
-            {description}
-        </p>
         <nav class="breadcrumbs">
             <ol>
-                <li><a href="index.html">Solutions logicielles de gestion pour entreprises au Maroc</a></li>
+                <li>
+                    <a href="index.html"
+                        >Solutions logicielles de gestion pour entreprises au
+                        Maroc</a
+                    >
+                </li>
                 <li class="current">{title}</li>
             </ol>
         </nav>
     </div>
 </div>
+
+<section id="service-details" class="service-details section">
+    <div class="container">
+        <div class="row gy-5">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="service-box">
+                    <h4>Bénéfices</h4>
+                    <div class="services-list">
+                        {
+                            benefits.map((benefit, index) => (
+                                <a href="#">
+                                    <i class={`bi ${benefit.icon}`} />
+                                    <span>{benefit.text}</span>
+                                </a>
+                            ))
+                        }
+                    </div>
+                </div><!-- End Services List -->
+
+                <div class="service-box">
+                    <h4>Download Catalog</h4>
+                    <div class="download-catalog">
+                        <a href="#"
+                            ><i class="bi bi-filetype-pdf"></i><span
+                                >Catalog PDF</span
+                            ></a
+                        >
+                        <a href="#"
+                            ><i class="bi bi-file-earmark-word"></i><span
+                                >Catalog DOC</span
+                            ></a
+                        >
+                    </div>
+                </div><!-- End Services List -->
+
+                <div
+                    class="help-box d-flex flex-column justify-content-center align-items-center"
+                >
+                    <i class="bi bi-headset help-icon"></i>
+                    <h4>Have a Question?</h4>
+                    <p class="d-flex align-items-center mt-2 mb-0">
+                        <i class="bi bi-telephone me-2"></i>
+                        <span>+1 5589 55488 55</span>
+                    </p>
+                    <p class="d-flex align-items-center mt-1 mb-0">
+                        <i class="bi bi-envelope me-2"></i>
+                        <a href="mailto:contact@example.com"
+                            >contact@example.com</a
+                        >
+                    </p>
+                </div>
+            </div>
+
+            <div
+                class="col-lg-8 ps-lg-5"
+                data-aos="fade-up"
+                data-aos-delay="200"
+            >
+                <h2>
+                    {hero[0].text}
+                </h2>
+                <br />
+                <p>
+                    {hero[0].description}
+                </p>
+                <div class="hero-btns">
+                    <a href="/contact" class="btn btn-primary"
+                        >Demander une démo</a
+                    >
+                </div>
+
+                <h2>Fonctionnalités principales</h2>
+                <br />
+
+                <div class="container app-details">
+                    <div class="row gy-4 justify-content-center">
+                        {
+                            features.map((feature, index) => (
+                                <div
+                                    class="col-lg-6 col-md-6"
+                                    data-aos="fade-up"
+                                    data-aos-delay={100 + index * 100}
+                                >
+                                    <article class="service-item">
+                                        <span class="service-icon rounded-circle">
+                                            <i class={`bi ${feature.icon}`} />
+                                        </span>
+                                        <h3 style="cursor: pointer;">
+                                            {feature.feature}
+                                        </h3>
+                                        <p>{feature.desc}</p>
+                                    </article>
+                                </div>
+                            ))
+                        }
+                    </div>
+                </div>
+
+                <br />
+                <h2>{why[0].sectionTitle}</h2>
+                <br />
+                <ul>
+                    {
+                        why[0].items.map((item, index) => (
+                            <li>
+                                <i class="bi bi-check-circle" />{" "}
+                                <span>{item}</span>
+                            </li>
+                        ))
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="container section-title" data-aos="fade-up">
+        <h2>{cta}</h2>
+        <div class="hero-btns" style="margin: 0 auto;width: fit-content;">
+            <a href="/contact" class="btn btn-primary">Demander une démo</a>
+        </div>
+    </div>
+</section>

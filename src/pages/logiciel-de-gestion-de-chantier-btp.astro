@@ -1,6 +1,79 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import StarterPage from "../components/starter-page.astro";
+
+const benefits = [
+    {
+        text: "Suivi global des projets et des coûts",
+        icon: "bi-graph-up",
+    },
+    {
+        text: "Coordination simplifiée des équipes et ressources",
+        icon: "bi-people-fill",
+    },
+    {
+        text: "Gestion financière centralisée",
+        icon: "bi-cash-coin",
+    },
+    {
+        text: "Gain de temps et réduction des erreurs",
+        icon: "bi-speedometer2",
+    },
+];
+
+const hero = [
+    {
+        text: "Pilotez vos chantiers avec efficacité",
+        description:
+            "Gérez vos projets BTP de A à Z : suivi d’avancement, main-d'œuvre, fournisseurs et facturation, le tout dans une seule plateforme.",
+    },
+];
+
+const features = [
+    {
+        feature: "Tableau de bord",
+        desc: "Visualisez l’état des chantiers, dépenses et marges.",
+        icon: "bi-speedometer2",
+    },
+    {
+        feature: "Chantiers",
+        desc: "Créez, planifiez et suivez les travaux en temps réel.",
+        icon: "bi-building",
+    },
+    {
+        feature: "Employés",
+        desc: "Gérez les équipes et leurs affectations.",
+        icon: "bi-people-fill",
+    },
+    {
+        feature: "Clients & Fournisseurs",
+        desc: "Centralisez toutes vos relations.",
+        icon: "bi-building-gear",
+    },
+    {
+        feature: "Produits",
+        desc: "Suivez vos matériaux, équipements et stocks.",
+        icon: "bi-box-seam",
+    },
+    {
+        feature: "Factures de vente",
+        desc: "Automatisez la facturation et le suivi des paiements.",
+        icon: "bi-receipt",
+    },
+];
+
+const why = [
+    {
+        sectionTitle: "Pourquoi choisir notre solution BTP",
+        items: [
+            "Logiciel conçu pour les professionnels du bâtiment",
+            "Interface claire et adaptée à tous les profils",
+            "Accès sécurisé et données toujours disponibles",
+        ],
+    },
+];
+
+const cta = "Optimisez vos chantiers dès aujourd’hui !";
 ---
 
 <Layout>
@@ -8,6 +81,11 @@ import StarterPage from "../components/starter-page.astro";
         <StarterPage
             title="Logiciel de gestion de chantier BTP"
             description="Pilotez vos projets de construction efficacement"
+            benefits={benefits}
+            hero={hero}
+            features={features}
+            why={why}
+            cta = {cta}
         />
     </main>
 </Layout>

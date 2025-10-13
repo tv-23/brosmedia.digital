@@ -15,6 +15,7 @@ const services = [
       "Ressources optimisées : Suivi des employés, matériaux et fournisseurs au même endroit.",
     ],
     url: "/logiciel-de-gestion-de-chantier-btp",
+    img:"https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80"
   },
   {
     title: {
@@ -25,12 +26,64 @@ const services = [
     description2:
       "Simplifiez la gestion de vos produits, clients et fournisseurs tout en suivant vos ventes et vos achats en temps réel. Notre solution vous aide à augmenter vos performances commerciales et à mieux contrôler votre activité.",
     benefits: [
-      "Vue d’ensemble – Tableau de bord pour suivre ventes, achats et performance commerciale.",
-      "Gestion simplifiée – Produits, clients et fournisseurs centralisés en un seul outil.",
-      "Suivi financier – Factures et paiements automatisés pour un meilleur contrôle de trésorerie.",
-      "Performance accrue – Analyse de vos ventes pour prendre de meilleures décisions.",
+      "Vue d’ensemble : Tableau de bord pour suivre ventes, achats et performance commerciale.",
+      "Gestion simplifiée : Produits, clients et fournisseurs centralisés en un seul outil.",
+      "Suivi financier : Factures et paiements automatisés pour un meilleur contrôle de trésorerie.",
+      "Performance accrue : Analyse de vos ventes pour prendre de meilleures décisions.",
     ],
     url: "/logiciel-de-gestion-commerciale",
+    img:"https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=812&q=80"
+  },
+  {
+    title: {
+      partOne: "Logiciel",
+      partTwo: "de réservation hôtelière",
+    },
+    description1: "Simplifiez la gestion de votre établissement",
+    description2:
+      "Centralisez vos réservations, la gestion des chambres, des clients et de la facturation dans une seule plateforme. Notre solution vous aide à optimiser l’occupation, automatiser la facturation et améliorer l’expérience client.",
+    benefits: [
+      "Pilotage global : Tableau de bord complet pour suivre vos réservations, finances et taux d’occupation.",
+      "Gestion centralisée : Réservations, chambres, repas et extras gérés facilement en un seul endroit.",
+      "Automatisation : Factures, taxes et réductions calculées automatiquement pour gagner du temps.",
+      "Expérience client : Historique, préférences et communication pour fidéliser vos clients.",
+    ],
+    url: "/logiciel-de-gestion-commerciale",
+    img:"https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
+  },
+  {
+    title: {
+      partOne: "Logiciel de gestion",
+      partTwo: "de club sportif",
+    },
+    description1: "Simplifiez l’administration et la relation avec vos membres",
+    description2:
+      "Gérez vos adhésions, la trésorerie et les activités sportives depuis une seule plateforme. Notre solution vous aide à centraliser les informations, suivre les paiements et améliorer l’expérience de vos membres.",
+    benefits: [
+      "Vue d’ensemble : Tableau de bord complet pour suivre les membres, paiements et trésorerie.",
+      "Gestion des activités : Types de sports, liste de prix et frais d’adhésion centralisés.",
+      "Suivi financier : Trésorerie, paiements et rapports financiers automatisés.",
+      "Membres et communication : Informations sur les membres et gestion simplifiée pour fidéliser vos adhérents.",
+    ],
+    url: "/logiciel-de-gestion-de-club-sportif",
+    img:"https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
+  },
+  {
+    title: {
+      partOne: "Logiciel de gestion",
+      partTwo: "de facturation",
+    },
+    description1: "Simplifiez vos factures et paiements",
+    description2:
+      "Centralisez vos clients et produits tout en automatisant la création et le suivi de vos factures. Notre solution vous permet de gagner du temps, réduire les erreurs et améliorer le suivi financier de votre entreprise.",
+    benefits: [
+      "Vue d’ensemble : Tableau de bord complet pour suivre vos factures et l’état des paiements.",
+      "Gestion des clients : Centralisation des informations clients pour un suivi simplifié.",
+      "Gestion des produits : Suivi des articles et services pour une facturation précise et rapide.",
+      "Facturation automatisée : Génération et suivi des factures en un clic, avec relances automatiques.",
+    ],
+    url: "/logiciel-de-gestion-de-club-sportif",
+    img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
   },
 ];
 ---
@@ -38,10 +91,9 @@ const services = [
 <section id="services" class="services section">
   <!-- Section Title -->
   <div class="container section-title" data-aos="fade-up">
-    <h2>Services</h2>
+    <h2>Nos logiciels de gestion</h2>
     <p>
-      Necessitatibus eius consequatur ex aliquid fuga eum quidem sint
-      consectetur velit
+      Optimisez vos opérations et simplifiez la gestion quotidienne.
     </p>
   </div><!-- End Section Title -->
 
@@ -101,7 +153,7 @@ const services = [
         <!-- Right Side - Image Display -->
         <div class="col-lg-6">
           <div class="image-display">
-            <img
+               <img
               src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80"
               class="carousel-img"
               alt="Smart Watch"
@@ -114,88 +166,46 @@ const services = [
 
     <!-- Mobile Layout (stacked) -->
     <div class="mobile-layout">
+      {
+                services.map((s) => (
       <div class="card card-item active">
         <div class="card-image">
           <img
-            src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=799&q=80"
-            alt="Smart Watch"
+            src={s.img} 
+            alt=`Brosmedia - ${s.title.partOne} ${s.title.partTwo}` 
           />
         </div>
-        <div class="card-body">
-          <h3 class="card-title">Smart Watch Series 5</h3>
-          <p class="card-text">
-            Advanced health monitoring, GPS, and water resistance up to 50
-            meters.
-          </p>
-          <a href="#" class="btn btn-primary">Learn More</a>
-        </div>
+       
       </div>
+      <article class="service-item">
+                      <h3>
+                        <a href={s.url} target="_blank">
+                          {s.title.partOne} <span>{s.title.partTwo}</span>
+                        </a>
+                      </h3>
+                      <strong>{s.description1}</strong>
+                      <br />
+                      <br />
+                      <p>{s.description2}</p>
 
-      <div class="card card-item">
-        <div class="card-image">
-          <img
-            src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=812&q=80"
-            alt="Wireless Earbuds"
-          />
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Wireless Earbuds Pro</h3>
-          <p class="card-text">
-            Premium sound quality with active noise cancellation and 24-hour
-            battery.
-          </p>
-          <a href="#" class="btn btn-primary">Shop Now</a>
-        </div>
-      </div>
-
-      <div class="card card-item">
-        <div class="card-image">
-          <img
-            src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80"
-            alt="Ultra-Slim Laptop"
-          />
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Ultra-Slim Laptop</h3>
-          <p class="card-text">
-            Powerful performance in a lightweight design with 14-inch full HD
-            display.
-          </p>
-          <a href="#" class="btn btn-primary">View Details</a>
-        </div>
-      </div>
-
-      <div class="card card-item">
-        <div class="card-image">
-          <img
-            src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80"
-            alt="DSLR Camera"
-          />
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">DSLR Camera Kit</h3>
-          <p class="card-text">
-            Professional photography made easy with this complete DSLR kit.
-          </p>
-          <a href="#" class="btn btn-primary">Explore</a>
-        </div>
-      </div>
-
-      <div class="card card-item">
-        <div class="card-image">
-          <img
-            src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80"
-            alt="Smart Home Hub"
-          />
-        </div>
-        <div class="card-body">
-          <h3 class="card-title">Smart Home Hub</h3>
-          <p class="card-text">
-            Control your entire home with voice commands and automated routines.
-          </p>
-          <a href="#" class="btn btn-primary">Discover</a>
-        </div>
-      </div>
+                      <ul class="list-unstyled">
+                        {s.benefits.map((bf) => (
+                          <li>
+                            <i class="bi bi-check-square-fill me-2" />
+                            {bf}
+                          </li>
+                        ))}
+                      </ul>
+                      <a
+                        href={s.url}
+                        target="_blank"
+                        class="card-action rounded-square d-flex align-items-center justify-content-center"
+                      >
+                        <i class="bi bi-arrow-up-right" />
+                      </a>
+                    </article>
+      ))
+              }
     </div>
   </div>
 </section>

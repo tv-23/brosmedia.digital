@@ -1,0 +1,87 @@
+  #why-us {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+  }
+
+  /* just viewport height so we "arrive" then lock */
+  .design-container {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 105vh;
+    pointer-events: none;
+    z-index: 10;
+    background-color: #0a0f4f;
+  }
+
+  .line {
+    position: absolute;
+    height: 4px;
+    background: #fff;
+    transform-origin: left center;
+    z-index: 1;
+  }
+
+  .cube {
+    position: absolute !important;
+    width: 200px !important;
+    height: 200px !important;
+    background: #f11203 !important;
+    color: #fff !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 1rem !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, .4) !important;
+    transform: translate(-50%, -50%) !important;
+    opacity: 0;
+    z-index: 2 !important;
+    border-radius: 0 !important;
+  }
+
+  .cube h3 {
+    margin: 0 0 .4rem;
+    font-size: 24px
+  }
+
+  .cube p {
+    margin: 0;
+    font-size: 16px;
+    text-align: justify
+  }
+
+  .cube .card-body {
+    padding: 0 !important;
+  }
+
+  .cube .card-body h3 {
+    margin-bottom: 15px !important;
+  }
+
+
+  @media (max-width: 768px) {
+    .cube {
+      width: 175px !important;
+      height: 175px !important;
+    }
+
+    .cube p {
+      font-size: 14px;
+    }
+
+    .cube h3 {
+      font-size: 20px
+    }
+
+    .design-container {
+      height: 135vh;
+    }
+
+    #why-us {
+      height: auto;
+    }
+  }
