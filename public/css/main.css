@@ -1392,6 +1392,7 @@ section,
     border-radius: 12px;
     box-shadow: 0 10px 25px color-mix(in srgb, var(--default-color), transparent 90%);
     transition: all 0.3s ease;
+    min-height: -webkit-fill-available;
 }
 
 .services .service-item::before,.app-details .service-item::before {
