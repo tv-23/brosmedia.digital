@@ -31,7 +31,7 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
         <nav class="breadcrumbs">
             <ol>
                 <li>
-                    <a href="index.html"
+                    <a href="/"
                         >Solutions logicielles de gestion pour entreprises au
                         Maroc</a
                     >
@@ -45,20 +45,34 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
 <section id="service-details" class="service-details section">
     <div class="container">
         <div class="row gy-5">
-            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="col-lg-4 order-2 order-md-1">
                 <div class="service-box">
                     <h4>Bénéfices</h4>
                     <div class="services-list">
                         {
                             benefits.map((benefit, index) => (
-                                <a href="#">
+                                <a style="cursor: pointer;">
                                     <i class={`bi ${benefit.icon}`} />
                                     <span>{benefit.text}</span>
                                 </a>
                             ))
                         }
                     </div>
-                </div><!-- End Services List -->
+                </div>
+
+                <div class="service-box">
+                    <h4>{why[0].sectionTitle}</h4>
+                    <div class="services-list">
+                        {
+                            why[0].items.map((item, index) => (
+                                <a style="cursor: pointer;">
+                                    <i class="bi bi-check-circle" />
+                                    <span>{item}</span>
+                                </a>
+                            ))
+                        }
+                    </div>
+                </div>
 
                 <div class="service-box">
                     <h4>Download Catalog</h4>
@@ -80,25 +94,35 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
                     class="help-box d-flex flex-column justify-content-center align-items-center"
                 >
                     <i class="bi bi-headset help-icon"></i>
-                    <h4>Have a Question?</h4>
+                    <h4>Vous avez une question ?</h4>
                     <p class="d-flex align-items-center mt-2 mb-0">
                         <i class="bi bi-telephone me-2"></i>
-                        <span>+1 5589 55488 55</span>
+                        <span>
+                            <a
+                                href="tel:+212671884968"
+                                class="text-white text-decoration-none hover:text-gray-300"
+                                aria-label="Call us at +212 6 71 88 49 68"
+                            >
+                                +212 6 71 88 49 68
+                            </a>
+                        </span>
                     </p>
                     <p class="d-flex align-items-center mt-1 mb-0">
                         <i class="bi bi-envelope me-2"></i>
-                        <a href="mailto:contact@example.com"
-                            >contact@example.com</a
-                        >
+                        <a
+                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@brosmedia.ma"
+                  target="_blank"
+                  class="text-white text-decoration-none hover:text-gray-300"
+                  aria-label="Email us at contact@brosmedia.ma"
+                  data-astro-cid-sz7xmlte=""
+                >
+                  contact@brosmedia.ma
+                </a>
                     </p>
                 </div>
             </div>
 
-            <div
-                class="col-lg-8 ps-lg-5"
-                data-aos="fade-up"
-                data-aos-delay="200"
-            >
+            <div class="col-lg-8 ps-lg-5 order-1 order-md-2">
                 <h2>
                     {hero[0].text}
                 </h2>
@@ -138,20 +162,6 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
                         }
                     </div>
                 </div>
-
-                <br />
-                <h2>{why[0].sectionTitle}</h2>
-                <br />
-                <ul>
-                    {
-                        why[0].items.map((item, index) => (
-                            <li>
-                                <i class="bi bi-check-circle" />{" "}
-                                <span>{item}</span>
-                            </li>
-                        ))
-                    }
-                </ul>
             </div>
         </div>
     </div>
