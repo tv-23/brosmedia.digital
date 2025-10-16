@@ -1,5 +1,16 @@
+---
+const currentPath = Astro.url.pathname;
+const paths = [
+    "/logiciel-de-gestion-de-chantier-btp",
+    "/logiciel-de-gestion-commerciale",
+    "/logiciel-de-gestion-de-club-sportif",
+    "/logiciel-de-gestion-de-facturation",
+    "/logiciel-de-reservation-hoteliere"
+];
+---
+
 <style>
-     @media (max-width: 991.98px) {
+    @media (max-width: 991.98px) {
         span#social-media-links {
             position: absolute !important;
             left: 3px !important;
@@ -123,36 +134,51 @@
 
         <nav id="navmenu" class="navmenu">
             <ul>
-                <li><a href="/" class="active">Accueil</a></li>
+                <li>
+                    <a href="/" class={currentPath === "/" ? "active" : ""}
+                        >Accueil</a>
+                </li>
                 <li class="dropdown">
-                    <a href="#"
+                    <a href="#" class={paths.includes(currentPath) ? "active" : ""}
                         ><span>Solutions</span><i
                             class="bi bi-chevron-down toggle-dropdown"></i></a
                     >
                     <ul>
                         <li>
                             <a href="/logiciel-de-gestion-de-chantier-btp"
-                                >Logiciel de gestion de chantier BTP</a>
+                                >Logiciel de gestion de chantier BTP</a
+                            >
                         </li>
                         <li>
                             <a href="/logiciel-de-gestion-commerciale"
-                                >Logiciel de gestion commerciale</a>
+                            class="active"
+                                >Logiciel de gestion commerciale</a
+                            >
                         </li>
                         <li>
                             <a href="/logiciel-de-reservation-hoteliere"
-                                >Logiciel de réservation hôtelière</a>
+                                >Logiciel de réservation hôtelière</a
+                            >
                         </li>
                         <li>
                             <a href="/logiciel-de-gestion-de-club-sportif"
-                                >Logiciel de gestion de club sportif</a>
+                                >Logiciel de gestion de club sportif</a
+                            >
                         </li>
                         <li>
                             <a href="/logiciel-de-gestion-de-facturation"
-                                >Logiciel de gestion de facturation</a>
+                                >Logiciel de gestion de facturation</a
+                            >
                         </li>
                     </ul>
                 </li>
-                <li><a href="/qui-sommes-nous">Qui sommes-nous ?</a></li>
+                <li>
+                    <a
+                        href="/qui-sommes-nous"
+                        class={currentPath === "/qui-sommes-nous"
+                            ? "active"
+                            : ""}>Qui sommes-nous ?</a>
+                </li>
             </ul>
             <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
         </nav>

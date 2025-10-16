@@ -58,6 +58,51 @@
 }
 
 
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70px;
+    height: 70px;
+    background-color: rgb(10 15 79);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 2;
+    animation: ripple 1.5s infinite;
+    box-shadow: 0 0 0 0 rgba(10, 15, 79, 0.7);
+    transition: box-shadow 0.3s ease;
+}
+
+.play-icon::before {
+    content: "";
+    border-style: solid;
+    border-width: 12px 0 12px 20px;
+    border-color: transparent transparent transparent #e30f29;
+    display: inline-block;
+    margin-left: 3px;
+}
+
+@keyframes ripple {
+    0% {
+        box-shadow: 0 0 0 0 rgba(10, 15, 79, 0.6);
+    }
+
+    70% {
+        box-shadow: 0 0 0 20px rgba(10, 15, 79, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(10, 15, 79, 0);
+    }
+
+}
+
+
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {

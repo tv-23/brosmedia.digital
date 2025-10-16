@@ -3,7 +3,7 @@
     <div class="row align-items-center">
       <div class="col-lg-7 order-2 order-md-1">
         <div class="hero-content" data-aos="fade-up" data-aos-delay="200">
-          <h2>Solutions logicielles de gestion pour entreprises au Marocz</h2>
+          <h2>Solutions logicielles de gestion pour entreprises au Maroc</h2>
           <p>
             <b>BrosMedia</b> propose des logiciels de gestion sur mesure : facturation,
             réservation hôtelière, gestion de clubs sportifs, suivi de chantiers
@@ -53,15 +53,67 @@
         </div>
       </div>
       <div class="col-lg-5 order-1 order-md-2">
-        <div class="hero-image" data-aos="zoom-out" data-aos-delay="300">
-          <img
-            src="/img/about/about-8.webp"
-            alt="Consulting Services"
-            class="img-fluid"
-          />
+        <div class="visual-content" id="visualContentDesktop">
+          <div class="fluid-shape">
+            <div
+              class="position-relative cursor-pointer overflow-hidden"
+              id="video-thumbnail"
+              role="button"
+              aria-label="Play video"
+              tabindex="0"
+            >
+              <img
+                src="/img/thumbnail/image.0000002 (1).webp"
+                alt="Video thumbnail"
+                class="w-100 h-100 video-img"
+                style="object-fit: cover;"
+                loading="eager"
+                width="100%"
+                height="100%"
+              />
+              <!-- Play Button Overlay -->
+              <div class="play-icon" />
+            </div>
+          </div>
         </div>
         <br class="d-block d-md-none" />
       </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const thumbnail = document.getElementById("video-thumbnail");
+    if (!thumbnail) return;
+
+    const playVideo = () => {
+      // Get reference to the visual-content container
+      const visualContent = document.getElementById("visualContentDesktop");
+      if (!visualContent) return;
+
+      // Create iframe with your VideoAsk URL
+      const iframe = document.createElement("iframe");
+      iframe.src = "https://www.videoask.com/fawysaw0m?autoplay=1";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.className = "w-100 h-100";
+      iframe.style.aspectRatio = "8/9";
+      iframe.title = "VideoAsk player";
+      iframe.setAttribute("allowfullscreen", "");
+      iframe.setAttribute("frameborder", "0");
+
+      // Clear the visual-content and add the iframe
+      visualContent.innerHTML = "";
+      visualContent.appendChild(iframe);
+    };
+
+    thumbnail.addEventListener("click", playVideo);
+        thumbnail.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                playVideo();
+            }
+        });
+  });
+</script>
