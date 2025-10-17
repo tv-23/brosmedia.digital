@@ -58,6 +58,9 @@
 }
 
 
+.app-visual-content>.service-box {
+    padding: 0 !important;
+}
 
 .play-icon {
     position: absolute;
@@ -3447,8 +3450,8 @@ section,
 }
 
 .service-details p {
-    font-size: 15px;
-}
+    font-size: 16px;
+    font-weight: 500;}
 
 .service-details ul {
     list-style: none;
@@ -4288,6 +4291,21 @@ section,
 .contact-2 .php-email-form textarea::placeholder {
     color: color-mix(in srgb, var(--default-color), transparent 70%);
 }
+
+.contact-2 .php-email-form select {
+    font-size: 14px;
+    padding: 10px 15px;
+    box-shadow: none;
+    border-radius: 0;
+    color: var(--default-color);
+    background-color: color-mix(in srgb, var(--background-color), transparent 50%);
+    border-color: color-mix(in srgb, var(--default-color), transparent 80%);
+  }
+  
+  .contact-2 .php-email-form select:focus {
+    border-color: var(--accent-color);
+  }
+  
 
 .contact-2 .php-email-form button[type=submit] {
     background: var(--accent-color);

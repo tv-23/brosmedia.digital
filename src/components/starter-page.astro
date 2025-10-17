@@ -44,11 +44,8 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
 
 <section id="service-details" class="service-details section">
     <div class="container">
-
         <div class="row gy-5">
-            
-
-            <div class="col-lg-8 ps-lg-5 ">
+            <div class="col-lg-8 ps-lg-5 order-2 order-md-1">
                 <h2>
                     {hero[0].text}
                 </h2>
@@ -57,51 +54,46 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
                     {hero[0].description}
                 </p>
 
-                
-                
-                <div class="hero-btns">
-                    <a href="/contact" class="btn btn-primary"
-                        >Demander une démo</a
+                <div class="hero-btns" style="margin-top: 70px;">
+                    <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#demoModal">Demander une démo</button
                     >
                 </div>
-
-               
             </div>
 
-            <div class="col-lg-4 ">
+            <div class="col-lg-4 app-visual-content order-1 order-md-2">
                 <div class="service-box">
                     <div class="visual-content" id="visualContentDesktop">
                         <div class="fluid-shape">
-                          <div
-                            class="position-relative cursor-pointer overflow-hidden"
-                            id="video-thumbnail"
-                            role="button"
-                            aria-label="Play video"
-                            tabindex="0"
-                          >
-                            <img
-                              src="/img/thumbnail/image.0000002 (1).webp"
-                              alt="Video thumbnail"
-                              class="w-100 h-100 video-img"
-                              style="object-fit: cover;"
-                              loading="eager"
-                              width="100%"
-                              height="100%"
-                            />
-                            <!-- Play Button Overlay -->
-                            <div class="play-icon" />
-                          </div>
+                            <div
+                                class="position-relative cursor-pointer overflow-hidden"
+                                id="video-thumbnail"
+                                role="button"
+                                aria-label="Play video"
+                                tabindex="0"
+                            >
+                                <img
+                                    src="/img/thumbnail/image.0000002 (1).webp"
+                                    alt="Video thumbnail"
+                                    class="w-100 h-100 video-img"
+                                    style="object-fit: cover;"
+                                    loading="eager"
+                                    width="100%"
+                                    height="100%"
+                                />
+                                <!-- Play Button Overlay -->
+                                <div class="play-icon"></div>
+                            </div>
                         </div>
-                      </div>
+                    </div>
                 </div>
-
-               
-
-                
             </div>
         </div>
 
-        <br>
+        <br />
         <div class="row gy-5">
             <div class="col-lg-4 order-2 order-md-1">
                 <div class="service-box">
@@ -168,14 +160,14 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
                     <p class="d-flex align-items-center mt-1 mb-0">
                         <i class="bi bi-envelope me-2"></i>
                         <a
-                  href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@brosmedia.ma"
-                  target="_blank"
-                  class="text-white text-decoration-none hover:text-gray-300"
-                  aria-label="Email us at contact@brosmedia.ma"
-                  data-astro-cid-sz7xmlte=""
-                >
-                  contact@brosmedia.ma
-                </a>
+                            href="https://mail.google.com/mail/?view=cm&fs=1&to=contact@brosmedia.ma"
+                            target="_blank"
+                            class="text-white text-decoration-none hover:text-gray-300"
+                            aria-label="Email us at contact@brosmedia.ma"
+                            data-astro-cid-sz7xmlte=""
+                        >
+                            contact@brosmedia.ma
+                        </a>
                     </p>
                 </div>
             </div>
@@ -222,3 +214,169 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
         </div>
     </div>
 </section>
+
+<!-- Modal -->
+<div
+    class="modal fade"
+    id="demoModal"
+    tabindex="-1"
+    aria-labelledby="demoModalLabel"
+    aria-hidden="true"
+>
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="demoModalLabel">
+                    Demander une démo
+                </h5>
+                <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Fermer"></button>
+            </div>
+            <div class="modal-body contact-2">
+                <form id="demoForm" class="php-email-form contact-2 p-2">
+                    <div class="mb-3">
+                        <label for="name" class="form-label"
+                            >Nom complet <span style="color:red">*</span></label
+                        >
+                        <input
+                            type="text"
+                            class="form-control"
+                            id="name"
+                            name="name"
+                            required
+                        />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email <span style="color:red">*</span></label>
+                        <input
+                            type="email"
+                            class="form-control"
+                            id="email"
+                            name="email"
+                            required
+                        />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="tel" class="form-label">Téléphone <span style="color:red">*</span></label>
+                        <input
+                            type="tel"
+                            class="form-control"
+                            id="tel"
+                            name="tel"
+                            required
+                        />
+                    </div>
+
+                    <div class="mb-3">
+                        <label for="logiciel" class="form-label">Logiciel</label
+                        >
+                        <select
+                            class="form-select"
+                            id="logiciel"
+                            name="logiciel"
+                            required
+                        >
+                            <option value="chantier"
+                                >Logiciel de gestion de chantier BTP</option
+                            >
+                            <option value="commerciale"
+                                >Logiciel de gestion commerciale</option
+                            >
+                            <option value="hoteliere"
+                                >Logiciel de réservation hôtelière</option
+                            >
+                            <option value="club"
+                                >Logiciel de gestion de club sportif</option
+                            >
+                            <option value="facturation"
+                                >Logiciel de gestion de facturation</option
+                            >
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100"
+                        >Envoyer</button
+                    >
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const thumbnail = document.getElementById("video-thumbnail");
+        if (!thumbnail) return;
+
+        const playVideo = () => {
+            // Get reference to the visual-content container
+            const visualContent = document.getElementById(
+                "visualContentDesktop",
+            );
+            if (!visualContent) return;
+
+            // Create iframe with your VideoAsk URL
+            const iframe = document.createElement("iframe");
+            iframe.src = "https://www.videoask.com/fawysaw0m?autoplay=1";
+            iframe.allow =
+                "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+            iframe.className = "w-100 h-100";
+            iframe.style.aspectRatio = "8/9";
+            iframe.title = "VideoAsk player";
+            iframe.setAttribute("allowfullscreen", "");
+            iframe.setAttribute("frameborder", "0");
+
+            // Clear the visual-content and add the iframe
+            visualContent.innerHTML = "";
+            visualContent.appendChild(iframe);
+        };
+
+        thumbnail.addEventListener("click", playVideo);
+        thumbnail.addEventListener("keydown", (event) => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                playVideo();
+            }
+        });
+
+        //   Form
+        const select = document.getElementById("logiciel");
+        const path = window.location.pathname;
+        const modalTitle = document.getElementById("demoModalLabel");
+
+        let logicielName = "";
+
+        if (path.includes("chantier")) {
+            select.value = "chantier";
+            logicielName = "Logiciel de gestion de chantier BTP";
+        } else if (path.includes("commerciale")) {
+            select.value = "commerciale";
+            logicielName = "Logiciel de gestion commerciale";
+        } else if (path.includes("hoteliere")) {
+            select.value = "hoteliere";
+            logicielName = "Logiciel de réservation hôtelière";
+        } else if (path.includes("club")) {
+            select.value = "club";
+            logicielName = "Logiciel de gestion de club sportif";
+        } else if (path.includes("facturation")) {
+            select.value = "facturation";
+            logicielName = "Logiciel de gestion de facturation";
+        }
+
+        // Update modal title dynamically
+        if (logicielName) {
+            modalTitle.textContent = `Demander une démo du ${logicielName}`;
+        }
+
+        if (path.includes("chantier")) select.value = "chantier";
+        else if (path.includes("commerciale")) select.value = "commerciale";
+        else if (path.includes("hoteliere")) select.value = "hoteliere";
+        else if (path.includes("club")) select.value = "club";
+        else if (path.includes("facturation")) select.value = "facturation";
+    });
+</script>
