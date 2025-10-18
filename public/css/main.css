@@ -600,9 +600,14 @@ h6 {
     font-size: 14px;
     position: relative;
 }
-
+.footer .footer-newsletter p{
+    color: black;
+}
+.footer .footer-newsletter h4{
+    color: #0a0f4f;
+}
 .footer .footer-newsletter {
-    background-color: #0a0f4f;
+    background-color: white;
     padding: 50px 0;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -618,7 +623,7 @@ h6 {
     padding: 6px 8px;
     position: relative;
     border-radius: 4px;
-    background-color: var(--surface-color);
+    background-color: #0a0f4f;
     border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     box-shadow: 0px 2px 25px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -634,7 +639,7 @@ h6 {
     border: 0;
     padding: 4px;
     width: 100%;
-    background-color: var(--surface-color);
+    background-color: #0a0f4f;
     color: var(--default-color);
 }
 
@@ -646,7 +651,7 @@ h6 {
     border: 0;
     font-size: 16px;
     padding: 0 20px;
-    margin: -7px -8px -7px 0;
+    margin: -7px -9px -7px 0;
     background: var(--accent-color);
     color: var(--contrast-color);
     transition: 0.3s;
