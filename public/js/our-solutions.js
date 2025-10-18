@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Mouse wheel navigation
     let lastScrollTime = 0;
-    const scrollDelay = 300; // milliseconds
+    const scrollDelay = 500; // milliseconds
 
     // Listen on the whole window
     window.addEventListener(
