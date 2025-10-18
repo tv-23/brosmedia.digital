@@ -1,0 +1,88 @@
+<form id="demoForm" class="php-email-form contact-2 p-2">
+    <div class="mb-3">
+        <label for="name" class="form-label"
+            >Nom complet <span style="color:red">*</span></label
+        >
+        <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="email" class="form-label"
+            >Email <span style="color:red">*</span></label
+        >
+        <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+        />
+    </div>
+
+    <div class="mb-3">
+        <label for="tel" class="form-label"
+            >Téléphone <span style="color:red">*</span></label
+        >
+        <input type="tel" class="form-control" id="tel" name="tel" required />
+    </div>
+
+    <div class="mb-3">
+        <label for="logiciel" class="form-label">Logiciel</label>
+        <select class="form-select" id="logiciel" name="logiciel" required>
+            <option value="chantier">Logiciel de gestion de chantier BTP</option
+            >
+            <option value="commerciale">Logiciel de gestion commerciale</option>
+            <option value="hoteliere">Logiciel de réservation hôtelière</option>
+            <option value="club">Logiciel de gestion de club sportif</option>
+            <option value="facturation"
+                >Logiciel de gestion de facturation</option
+            >
+        </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100">Envoyer</button>
+</form>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const select = document.getElementById("logiciel");
+        const path = window.location.pathname;
+        const modalTitle = document.getElementById("demoModalLabel");
+
+        let logicielName = "";
+
+        if (path.includes("chantier")) {
+            select.value = "chantier";
+            logicielName = "Logiciel de gestion de chantier BTP";
+        } else if (path.includes("commerciale")) {
+            select.value = "commerciale";
+            logicielName = "Logiciel de gestion commerciale";
+        } else if (path.includes("hoteliere")) {
+            select.value = "hoteliere";
+            logicielName = "Logiciel de réservation hôtelière";
+        } else if (path.includes("club")) {
+            select.value = "club";
+            logicielName = "Logiciel de gestion de club sportif";
+        } else if (path.includes("facturation")) {
+            select.value = "facturation";
+            logicielName = "Logiciel de gestion de facturation";
+        }
+
+        // Update modal title dynamically
+        if (logicielName) {
+            modalTitle.textContent = `Demander une démo du ${logicielName}`;
+        }
+
+        if (path.includes("chantier")) select.value = "chantier";
+        else if (path.includes("commerciale")) select.value = "commerciale";
+        else if (path.includes("hoteliere")) select.value = "hoteliere";
+        else if (path.includes("club")) select.value = "club";
+        else if (path.includes("facturation")) select.value = "facturation";
+    });
+</script>

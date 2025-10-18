@@ -117,6 +117,17 @@
     color:var(--bs-body-color);
 }
 
+h5#demoModalLabel{
+    color: var(--default-color);
+}
+.demo_request_form{
+    background-color: transparent;
+}
+
+.about-brosmedia-digital .demo_request_form p,.about-brosmedia-digital .demo_request_form label{
+    color: color-mix(in srgb, var(--background-color), transparent 20%) !important;
+}
+
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
@@ -4352,7 +4363,7 @@ section,
 }
 
 
-.contact-2 .php-email-form button[type=submit] {
+.contact-2 .php-email-form button[type=submit],.about-brosmedia-digital .demo_request_form button[type=submit] {
     background: var(--accent-color);
     color: var(--contrast-color);
     border: 0;
@@ -4361,7 +4372,8 @@ section,
     border-radius: 4px;
 }
 
-.contact-2 .php-email-form button[type=submit]:hover {
+.contact-2 .php-email-form button[type=submit]:hover,
+,.about-brosmedia-digital .demo_request_form button[type=submit]:hover {
     background: color-mix(in srgb, var(--accent-color), transparent 20%);
 }
 

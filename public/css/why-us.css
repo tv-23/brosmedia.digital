@@ -26,8 +26,8 @@
 
   .cube {
     position: absolute !important;
-    width: 200px !important;
-    height: 200px !important;
+    width: 225px !important;
+    height: 225px !important;
     background: #f11203 !important;
     color: #fff !important;
     border-radius: 12px !important;
