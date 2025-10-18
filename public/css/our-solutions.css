@@ -11,9 +11,9 @@
 }
 
 #services .desktop-layout .card-item {
-   
+
     border: none;
-   
+
 }
 
 #services .desktop-layout .card-item:not(.active) {
@@ -28,7 +28,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #f8f9fa;
 }
 
 /* Mobile layout (stacked) */
@@ -40,8 +39,9 @@
     border: none;
     border-radius: 15px;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
-    background: linear-gradient(to right, #f8f9fa, #e9f1ff);
+    margin-top: 30px;
+    margin-bottom: 5px;
+    background: transparent;
 }
 
 #services .mobile-layout .card-image {
@@ -214,7 +214,7 @@
 }
 
 article.service-item .bi-check-square-fill {
-    color:#e30f29;
+    color: #e30f29;
 }
 
 article.service-item p {
