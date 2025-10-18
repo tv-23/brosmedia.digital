@@ -596,8 +596,10 @@ h6 {
 }
 
 .footer .footer-newsletter {
-    background-color: color-mix(in srgb, #0a0f4f, transparent 50%);
+    background-color:#0a0f4f;
     padding: 50px 0;
+    border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
 }
 
 .footer .footer-newsletter h4 {
@@ -832,7 +834,9 @@ color: #f5f6f8;
 .page-title .breadcrumbs ol li+li {
     padding-left: 10px;
 }
-
+article.service-item h3,.service-box h4{
+    color: var(--default-color);
+}
 .page-title .breadcrumbs ol li+li::before {
     content: "/";
     display: inline-block;
