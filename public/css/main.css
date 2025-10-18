@@ -57,9 +57,10 @@
     /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
-*{
+* {
     font-family: "Poppins", sans-serif;
 }
+
 .app-visual-content>.service-box {
     padding: 0 !important;
 }
@@ -108,10 +109,13 @@
 }
 
 
-.feature-content h5,.contact-form.aos-init.aos-animate h3 {
+.feature-content h5, .contact-form.aos-init.aos-animate h3 {
     color: var(--default-color);
 }
 
+.mobile-layout>article.service-item strong,.mobile-layout>article.service-item ul li {
+    color:var(--bs-body-color);
+}
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
@@ -598,7 +602,7 @@ h6 {
 }
 
 .footer .footer-newsletter {
-    background-color:#0a0f4f;
+    background-color: #0a0f4f;
     padding: 50px 0;
     border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
     border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
@@ -813,11 +817,11 @@ h6 {
     color: #f5f6f8;
 }
 
-.page-title .breadcrumbs a{
-color: #f5f6f8;
+.page-title .breadcrumbs a {
+    color: #f5f6f8;
 }
 
-.page-title .breadcrumbs a:hover{
+.page-title .breadcrumbs a:hover {
     color: var(--accent-color);
 }
 
@@ -836,9 +840,11 @@ color: #f5f6f8;
 .page-title .breadcrumbs ol li+li {
     padding-left: 10px;
 }
-article.service-item h3,.service-box h4{
+
+article.service-item h3, .service-box h4 {
     color: var(--default-color);
 }
+
 .page-title .breadcrumbs ol li+li::before {
     content: "/";
     display: inline-block;
@@ -935,7 +941,8 @@ section,
         font-size: 2rem;
     }
 }
-.faq .faq-container .faq-item .faq-content p{
+
+.faq .faq-container .faq-item .faq-content p {
     color: black;
 }
 
@@ -955,43 +962,43 @@ section,
 }
 
 
-.hero .hero-content .hero-btns,.service-details .hero-btns {
+.hero .hero-content .hero-btns, .service-details .hero-btns {
     display: flex;
     gap: 1rem;
     margin-bottom: 2.5rem;
 }
 
 @media (max-width: 576px) {
-    .hero .hero-content .hero-btns,.service-details .hero-btns {
+    .hero .hero-content .hero-btns, .service-details .hero-btns {
         flex-direction: column;
     }
 }
 
-.hero .hero-content .hero-btns .btn,.service-details .hero-btns .btn {
+.hero .hero-content .hero-btns .btn, .service-details .hero-btns .btn {
     padding: 12px 30px;
     font-weight: 600;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-.hero .hero-content .hero-btns .btn-primary,.service-details .hero-btns .btn-primary {
+.hero .hero-content .hero-btns .btn-primary, .service-details .hero-btns .btn-primary {
     background-color: var(--accent-color);
     border-color: var(--accent-color);
     color: var(--contrast-color);
 }
 
-.hero .hero-content .hero-btns .btn-primary:hover,.service-details .hero-btns .btn-primary:hover {
+.hero .hero-content .hero-btns .btn-primary:hover, .service-details .hero-btns .btn-primary:hover {
     background-color: color-mix(in srgb, var(--accent-color), #000 10%);
     border-color: color-mix(in srgb, var(--accent-color), #000 10%);
 }
 
-.hero .hero-content .hero-btns .btn-outline,.service-details .hero-btns .btn-outline {
+.hero .hero-content .hero-btns .btn-outline, .service-details .hero-btns .btn-outline {
     background-color: transparent;
     border: 2px solid var(--accent-color);
     color: var(--accent-color);
 }
 
-.hero .hero-content .hero-btns .btn-outline:hover,.service-details .hero-btns .btn-outline:hover {
+.hero .hero-content .hero-btns .btn-outline:hover, .service-details .hero-btns .btn-outline:hover {
     background-color: var(--accent-color);
     color: var(--contrast-color);
 }
@@ -1008,7 +1015,7 @@ section,
     }
 }
 
-.hero .hero-content .hero-stats .stat-item h3  {
+.hero .hero-content .hero-stats .stat-item h3 {
     font-size: 2rem;
     font-weight: 700;
     color: var(--accent-color);
@@ -1466,7 +1473,7 @@ section,
 # Services Section
 --------------------------------------------------------------*/
 
-.services .service-item,.app-details .service-item {
+.services .service-item, .app-details .service-item {
     position: relative;
     padding: 40px 30px 55px;
     background-color: var(--surface-color);
@@ -1476,7 +1483,7 @@ section,
     min-height: -webkit-fill-available;
 }
 
-.services .service-item::before,.app-details .service-item::before {
+.services .service-item::before, .app-details .service-item::before {
     content: "";
     position: absolute;
     top: 0;
@@ -1486,7 +1493,7 @@ section,
     background-color: var(--accent-color);
 }
 
-.services .service-item .service-icon,.app-details .service-item .service-icon {
+.services .service-item .service-icon, .app-details .service-item .service-icon {
     width: 72px;
     height: 72px;
     background-color: color-mix(in srgb, var(--accent-color), transparent 92%);
@@ -1499,41 +1506,41 @@ section,
     transition: transform 0.3s ease;
 }
 
-.services .service-item .service-icon i,.app-details .service-item .service-icon i {
+.services .service-item .service-icon i, .app-details .service-item .service-icon i {
     line-height: 1;
 }
 
-.app-details .service-item h3:hover{
+.app-details .service-item h3:hover {
     color: var(--accent-color);
 }
 
-.services .service-item h3,.app-details .service-item h3 {
+.services .service-item h3, .app-details .service-item h3 {
     font-size: 26px;
     font-weight: 700;
     margin-bottom: 15px;
 }
 
-.services .service-item h3 a,.app-details .service-item h3 a {
+.services .service-item h3 a, .app-details .service-item h3 a {
     color: black;
     transition: color 0.3s ease;
 }
 
-.services .service-item h3 a span,.app-details .service-item h3 a span {
+.services .service-item h3 a span, .app-details .service-item h3 a span {
     display: inline-block;
     color: var(--accent-color);
 }
 
-.services .service-item h3 a:hover ,.app-details .service-item h3 a:hover{
+.services .service-item h3 a:hover, .app-details .service-item h3 a:hover {
     color: var(--accent-color);
 }
 
-.services .service-item p,.app-details .service-item p {
+.services .service-item p, .app-details .service-item p {
     color: var(--default-color);
     margin-bottom: 0;
     transition: color 0.3s ease;
 }
 
-.services .service-item .card-action,.app-details .service-item .card-action {
+.services .service-item .card-action, .app-details .service-item .card-action {
     position: absolute;
     right: 24px;
     bottom: 24px;
@@ -1548,43 +1555,43 @@ section,
     transition: all 0.3s ease;
 }
 
-.services .service-item .card-action i,.app-details .service-item .card-action i {
+.services .service-item .card-action i, .app-details .service-item .card-action i {
     transition: transform 0.3s ease;
 }
 
-.services .service-item .card-action:hover i ,.app-details .service-item .card-action:hover i {
+.services .service-item .card-action:hover i, .app-details .service-item .card-action:hover i {
     transform: rotate(45deg);
 }
 
-.services .service-item:hover ,.app-details .service-item:hover {
+.services .service-item:hover, .app-details .service-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 14px 30px color-mix(in srgb, var(--default-color), transparent 85%);
 }
 
-.services .service-item:hover .service-icon ,.app-details .service-item:hover .service-icon {
+.services .service-item:hover .service-icon, .app-details .service-item:hover .service-icon {
     transform: scale(1.1);
 }
 
-.services .service-item:hover p,.app-details .service-item:hover p {
+.services .service-item:hover p, .app-details .service-item:hover p {
     color: color-mix(in srgb, var(--default-color), transparent 20%);
 }
 
-.services .service-item:hover .card-action,.app-details .service-item:hover .card-action {
+.services .service-item:hover .card-action, .app-details .service-item:hover .card-action {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
 
 @media (max-width: 768px) {
-    .services .service-item,.app-details .service-item {
+    .services .service-item, .app-details .service-item {
         padding: 50px 25px 70px;
     }
 
-    .services .service-item h3 ,.app-details .service-item h3{
+    .services .service-item h3, .app-details .service-item h3 {
         font-size: 22px;
     }
 
-    .services .service-item .service-icon,.app-details .service-item .service-icon {
+    .services .service-item .service-icon, .app-details .service-item .service-icon {
         width: 64px;
         height: 64px;
         font-size: 30px;
@@ -2132,7 +2139,7 @@ section,
 # Why Us Section
 --------------------------------------------------------------*/
 
-.why-us .card-item,.why-our-app .card-item {
+.why-us .card-item, .why-our-app .card-item {
     padding: 1.5rem;
     border-radius: 0.5rem;
     background-color: var(--surface-color);
@@ -2141,24 +2148,24 @@ section,
     height: 100%;
 }
 
-.why-us .card-item:hover,.why-our-app .card-item:hover {
+.why-us .card-item:hover, .why-our-app .card-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 }
 
-.why-us .card-item .card-number,.why-our-app .card-item .card-number {
+.why-us .card-item .card-number, .why-our-app .card-item .card-number {
     font-size: 2.5rem;
     font-weight: 700;
     color: var(--accent-color);
     margin-bottom: 1rem;
 }
 
-.why-us .card-item h3,.why-our-app .card-item h3 {
+.why-us .card-item h3, .why-our-app .card-item h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
 }
 
-.why-us .card-item p,.why-our-app .card-item p {
+.why-us .card-item p, .why-our-app .card-item p {
     color: color-mix(in srgb, var(--default-color), transparent 25%);
     font-size: 0.9rem;
     line-height: 1.6;
@@ -2172,6 +2179,7 @@ section,
     font-size: 14px;
     font-weight: initial;
 }
+
 /*--------------------------------------------------------------
 # Call To Action Section
 --------------------------------------------------------------*/
@@ -3475,14 +3483,15 @@ section,
     margin-bottom: 20px;
 }
 
-.service-details h3,.service-details h2 {
+.service-details h3, .service-details h2 {
     font-size: 26px;
     font-weight: 700;
 }
 
 .service-details p {
     font-size: 16px;
-    font-weight: 500;}
+    font-weight: 500;
+}
 
 .service-details ul {
     list-style: none;
@@ -4331,12 +4340,12 @@ section,
     color: var(--default-color);
     background-color: color-mix(in srgb, var(--background-color), transparent 50%);
     border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-  }
-  
-  .contact-2 .php-email-form select:focus {
+}
+
+.contact-2 .php-email-form select:focus {
     border-color: var(--accent-color);
-  }
-  
+}
+
 
 .contact-2 .php-email-form button[type=submit] {
     background: var(--accent-color);
@@ -4353,15 +4362,16 @@ section,
 
 
 /* Abel */
-.top-bar{
+.top-bar {
     font-weight: 600;
 }
-span#contact-phone  {
+
+span#contact-phone {
     background-color: #fff;
     padding: 2px 10px;
 }
 
-span#contact-phone a,span#contact-phone span{
+span#contact-phone a, span#contact-phone span {
     color: black !important;
-    
+
 }
