@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 29.7.1, SVG Export Plug-In . SVG Version: 9.03 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 250 150" style="enable-background:new 0 0 250 150;" xml:space="preserve">
+<g>
+	<path id="waves" style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;" d="M59.62,129.275
+		c3.846,0,9.615-8.076,16.345-9.23c3.846,0,6.73,8.076,16.345,9.23c6.73,0,9.615-8.076,16.345-8.076
+		c6.73,0,9.615,8.076,16.345,8.076s9.615-8.076,16.345-8.076s9.615,8.076,16.345,8.076c6.73,0,9.615-8.076,16.345-8.076
+		s9.615,8.076,16.345,8.076"/>
+	<path id="hull" style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;" d="M72.773,121.237
+		l-4.404-8.423l113.454-7.307c-8.922,8.115-20.383,14.691-31.979,20.076"/>
+	<path id="front_sail" style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;" d="
+		M113.539,34.358c19.306,5.903,46.305,34.421,55.496,65.073c-5.038-1.981-8.807-4-15.884-2.192
+		C146.306,72.337,134.057,48.55,113.539,34.358z"/>
+	<path id="rear_sail" style="fill:none;stroke:#000000;stroke-width:4;stroke-linecap:round;stroke-linejoin:round;" d="
+		M77.638,20.725c24.729,10.576,58.65,40.017,64.88,79.225c-28.517-11.499-50.227-5.365-65.342,3.961
+		C100.232,74.606,89.887,41.281,77.638,20.725z"/>
+</g>
+</svg>

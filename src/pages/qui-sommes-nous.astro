@@ -1,30 +1,85 @@
 ---
+import "../../public/css/logo-slider.css";
 import Layout from "../layouts/Layout.astro";
+import LogoSlider from "../components/ai-logo-slider.astro";
 ---
+
 <Layout>
-
-<div class="page-title">
-    <div class="container position-relative">
-        <h1>Qui sommes-nous ?</h1>
-        <nav class="breadcrumbs">
-            <ol>
-                <li>
-                    <a href="/"
-                        >Solutions logicielles de gestion pour entreprises au
-                        Maroc</a
-                    >
-                </li>
-                <li class="current">Qui sommes-nous</li>
-            </ol>
-        </nav>
-    </div>
-</div>
-
-<section id="service-details" class="service-details section">
-    <div class="container">
-        <div class="row gy-5">
-            <div class="col-md-12"></div>
+    <div class="page-title">
+        <div class="container position-relative">
+            <h1>Qui sommes-nous ?</h1>
+            <nav class="breadcrumbs">
+                <ol>
+                    <li>
+                        <a href="/"
+                            >Solutions logicielles de gestion pour entreprises
+                            au Maroc</a
+                        >
+                    </li>
+                    <li class="current">Qui sommes-nous</li>
+                </ol>
+            </nav>
         </div>
     </div>
-</section>
+
+    <section id="service-details" class="service-details section">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-md-12">
+                    <p>
+                        Chez <a
+                            href="https://brosmedia.ma/"
+                            target="_blank"
+                            style="color: #ffff;"><strong>Brosmedia</strong></a
+                        >, l’innovation ne s’arrête pas au <strong>
+                            marketing digital</strong
+                        > — elle s’étend à <strong
+                            >la création d’applications de gestion intelligentes</strong
+                        >, conçues pour simplifier, automatiser et optimiser le
+                        pilotage des entreprises modernes.
+                    </p>
+                    <p>
+                        Avec <strong>Brosmedia digital</strong>, nous mettons la
+                        technologie et l’Intelligence Artificielle au service de
+                        la performance, en offrant des solutions qui
+                        transforment la manière dont les équipes collaborent,
+                        communiquent et atteignent leurs objectifs.
+                    </p>
+                    <p>
+                        Chaque application est pensée pour offrir une <strong
+                            >expérience utilisateur fluide</strong
+                        >, une <strong>sécurité renforcée des données</strong>,
+                        et une <strong>intégration intelligente de l’IA</strong
+                        >.
+                    </p>
+                    <p>
+                        De la gestion des clients à la planification des
+                        projets, en passant par la communication interne et le
+                        suivi de la productivité, nos solutions s’adaptent à
+                        tous les besoins professionnels.
+                    </p>
+                    <p>
+                        Nous intégrons les technologies les plus avancées,
+                        telles que <strong>ChatGPT</strong> pour l’assistance intelligente,
+                        <strong>Notion AI</strong> pour l’organisation et la planification,
+                        et <strong>Power BI</strong> pour la visualisation et l’analyse
+                        des données.
+                    </p>
+                    <p>
+                        Chaque outil de la suite <strong
+                            >Brosmedia digital</strong
+                        > est conçu pour offrir <strong
+                            >efficacité, rapidité et simplicité</strong
+                        >, afin que les entreprises puissent se concentrer sur
+                        leur véritable moteur : <strong>la croissance</strong>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <LogoSlider />
+
+    <br>
+
 </Layout>
