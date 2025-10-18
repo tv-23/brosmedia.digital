@@ -29,7 +29,7 @@
     /* Background color for the entire website, including individual sections */
     --default-color: #0a0f4f;
     /* Default color used for the majority of the text content across the entire website */
-    --heading-color: #0d3035;
+    --heading-color: #ffffff;
     /* Color for headings, subheadings and title throughout the website */
     --accent-color: #e30f29;
     /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
@@ -106,6 +106,11 @@
 }
 
 
+.feature-content h5,.contact-form.aos-init.aos-animate h3 {
+    color: var(--default-color);
+}
+
+
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
@@ -139,7 +144,7 @@
 
 body {
     color: var(--default-color);
-    background-color: var(--background-color);
+    background-color: var(--default-color);
     font-family: var(--default-font);
 }
 
@@ -791,7 +796,7 @@ h6 {
 
 .page-title {
     color: #f5f6f8;
-    background-color: var(--accent-color);
+    /* background-color: var(--accent-color); */
     padding: 120px 0 80px 0;
     text-align: center;
     position: relative;
@@ -804,6 +809,15 @@ h6 {
     color: #f5f6f8;
 }
 
+.page-title .breadcrumbs a{
+color: #f5f6f8;
+}
+
+.page-title .breadcrumbs a:hover{
+    color: var(--accent-color);
+}
+
+
 .page-title .breadcrumbs ol {
     display: flex;
     flex-wrap: wrap;
@@ -812,7 +826,7 @@ h6 {
     padding: 0;
     margin: 0;
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 400;
 }
 
 .page-title .breadcrumbs ol li+li {
@@ -823,7 +837,7 @@ h6 {
     content: "/";
     display: inline-block;
     padding-right: 10px;
-    color: color-mix(in srgb, var(--default-color), transparent 50%);
+    /* color: color-mix(in srgb, var(--default-color), transparent 50%); */
 }
 
 
@@ -833,8 +847,8 @@ h6 {
 
 section,
 .section {
-    color: var(--default-color);
-    background-color: var(--background-color);
+    color: var(--background-color);
+    background-color: var(--default-color);
     padding: 60px 0;
     scroll-margin-top: 90px;
     overflow: clip;
@@ -915,12 +929,25 @@ section,
         font-size: 2rem;
     }
 }
+.faq .faq-container .faq-item .faq-content p{
+    color: black;
+}
 
 .hero .hero-content p {
     font-size: 1.1rem;
     margin-bottom: 2rem;
+    color: color-mix(in srgb, var(--background-color), transparent 20%);
+}
+
+.faq-item>h3>span:last-child {
     color: var(--default-color);
 }
+
+.faq-active>h3>span:last-child {
+    color: var(--accent-color);
+
+}
+
 
 .hero .hero-content .hero-btns,.service-details .hero-btns {
     display: flex;
@@ -1110,7 +1137,7 @@ section,
 
 .about .about-description {
     margin-bottom: 2rem;
-    color: color-mix(in srgb, var(--default-color), transparent 20%);
+    color: color-mix(in srgb, var(--background-color), transparent 20%);
 }
 
 .about .feature-list-wrapper {
@@ -1156,7 +1183,7 @@ section,
 
 .about .contact-info {
     padding: 1rem 1.5rem;
-    background-color: var(--surface-color);
+    background-color: transparent;
     border-radius: 0.5rem;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.06);
 }
@@ -1167,7 +1194,7 @@ section,
 }
 
 .about .contact-info .contact-label {
-    color: color-mix(in srgb, var(--default-color), transparent 30%);
+    color: color-mix(in srgb, var(--background-color), transparent 20%);
     font-size: 0.875rem;
     margin: 0;
 }
@@ -1293,7 +1320,7 @@ section,
 }
 
 .stats .stats-hero .lead {
-    color: var(--default-color);
+    color: color-mix(in srgb, var(--background-color), transparent 20%);
     font-size: 1.125rem;
     font-weight: 400;
     line-height: 1.6;
@@ -1451,8 +1478,6 @@ section,
     width: 100%;
     height: 6px;
     background-color: var(--accent-color);
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
 }
 
 .services .service-item .service-icon,.app-details .service-item .service-icon {
@@ -1483,7 +1508,7 @@ section,
 }
 
 .services .service-item h3 a,.app-details .service-item h3 a {
-    color: var(--heading-color);
+    color: black;
     transition: color 0.3s ease;
 }
 

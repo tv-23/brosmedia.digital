@@ -1,0 +1,307 @@
+.new-team-section .interactive-section {
+    max-width: 1200px;
+    padding: 30px;
+}
+
+.new-team-section .custom-tab {
+    background-color: transparent;
+    border: none;
+    padding: 12px 25px;
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--dark-text);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.new-team-section .custom-tab:hover:not(.active) {
+    color: var(--primary-purple);
+}
+
+.new-team-section .custom-tab.active {
+    color: var(--primary-purple);
+    border-bottom-color: var(--primary-purple);
+}
+
+.new-team-section .hero-display {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    height: auto;
+    z-index: 10;
+}
+
+.new-team-section .animated-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.new-team-section .top-animated-text {
+    width: 45.7%;
+    color: black;
+    padding: 25px;
+    font-size: 32px;
+    font-weight: bold;
+    transform: translateY(100%);
+    opacity: 0;
+    transition: all 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    height: 100%;
+}
+
+.new-team-section .hero-display.animated .top-animated-text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.new-team-section .hero-text-content-card {
+    position: absolute;
+    left: 25%;
+    bottom: 0px;
+    width: 50%;
+    background: white;
+    color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    z-index: 15;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+    border: 2px solid antiquewhite;
+    opacity: 0;
+}
+
+.new-team-section .hero-display.animated .hero-text-content-card {
+    opacity: 1;
+}
+
+.new-team-section .avatar-item-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 15;
+}
+
+.new-team-section .avatar-item {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+.new-team-section .avatar-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--primary-purple);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.new-team-section .avatar-item.active.visible img {
+    border-color: var(--primary-purple);
+    transform: scale(1.1);
+}
+
+.new-team-section .info-card-dynamic {
+    background-color: var(--light-purple);
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: opacity 0.5s ease-in-out;
+    height: 100%;
+}
+
+.new-team-section .img-fluid {
+    max-width: 60%;
+    height: auto;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out 0.4s;
+    margin-top: 100px;
+}
+
+.new-team-section .hero-display.animated .img-fluid {
+    opacity: 1;
+}
+
+.new-team-section .other-avatars-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.new-team-section .other-avatar-item {
+    position: absolute;
+    text-align: center;
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+    z-index: 10;
+    border: 3px solid transparent;
+}
+
+.new-team-section .other-avatar-item:hover {
+    transform: scale(1.1);
+    background: white;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.new-team-section .other-avatar-item img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+    margin-right: 8px;
+}
+
+.new-team-section .other-avatar-item span {
+    font-weight: 600;
+    font-size: 14px;
+    color: black;
+}
+
+
+/* Positioning for other avatars */
+
+.new-team-section .other-avatar-item:nth-child(1) {
+    top: 33%;
+    right: 5%;
+}
+
+.new-team-section .other-avatar-item:nth-child(2) {
+    top: 10%;
+    right: 10%;
+}
+
+.new-team-section .other-avatar-item:nth-child(3) {
+    top: 3%;
+    left: 3%;
+}
+
+.new-team-section .other-avatar-item:nth-child(4) {
+    bottom: 40%;
+    left: 10%;
+}
+
+.new-team-section .other-avatar-item:nth-child(5) {
+    top: 20%;
+    left: 15%;
+}
+
+
+/* Button group styling */
+
+.new-team-section .btn-group-team {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+button.btn.btn-team.btn-primary {
+    border: 2px solid transparent;
+    background-color: red;
+    font-weight: 500;
+}
+
+button.btn.btn-team.btn-primary:hover,
+button.btn.btn-team.btn-primary.active {
+    background-color: white;
+}
+
+
+/* .new-team-section .btn-team {
+  background-color: transparent;
+  border: 2px solid transparent;
+  color: var(--dark-text);
+  padding: 10px 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+} */
+
+.new-team-section .btn-team:hover,
+.new-team-section .btn-team.active {
+    color: black;
+    border-bottom: 2px solid var(--primary-purple);
+    background-color: transparent;
+}
+
+
+/* Responsive adjustments */
+
+@media (max-width: 768px) {
+    .new-team-section .hero-display {
+        height: 400px;
+    }
+    .new-team-section .top-animated-text {
+        width: 45.7%;
+        ;
+        font-size: 24px;
+        padding: 15px;
+    }
+    .new-team-section .hero-text-content-card {
+        left: 25%;
+        width: 50%;
+        padding: 0px;
+        font-size: 13px;
+    }
+    .new-team-section .other-avatar-item {
+        padding: 3px 8px;
+    }
+    .new-team-section .other-avatar-item img {
+        width: 30px;
+        height: 30px;
+        margin-right: 5px;
+    }
+    .new-team-section .other-avatar-item span {
+        font-size: 12px;
+    }
+    .new-team-section .btn-group-team {
+        gap: 5px;
+    }
+    .new-team-section .btn-team {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 450px) {
+    .new-team-section .img-fluid {
+        max-width: 100%;
+    }
+    .new-team-section .top-animated-text {
+        width: 76%;
+    }
+    .new-team-section .hero-text-content-card {
+        width: 100%;
+        left: 0;
+    }
+    .new-team-section .hero-text-content-card h2 {
+        font-size: 20px;
+    }
+    .new-team-section .hero-text-content-card p {
+        font-size: 14px;
+    }
+    .new-team-section .other-avatar-item {
+        visibility: hidden;
+    }
+    .new-team-section .btn-team {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+}

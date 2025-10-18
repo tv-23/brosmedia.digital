@@ -1,0 +1,217 @@
+---
+
+---
+
+<section class="section new-team-section">
+  <div class="container section-title">
+      <h2>Équipe</h2>
+      <div>
+          <span>Découvrez notre</span>
+          <span class="description-title">Équipe</span>
+      </div>
+  </div>
+
+  <div class="container interactive-section">
+      <div class="row justify-content-center mb-5">
+          <div class="col-12">
+              <!-- Bootstrap buttons instead of nav -->
+              <div
+                  class="btn-group-team"
+                  role="group"
+                  aria-label="Team members"
+              >
+                  <button
+                      type="button"
+                      class="btn btn-team btn-primary active"
+                      data-member="hamza">FONDATEUR</button
+                  >
+                  <button
+                      type="button"
+                      class="btn btn-team btn-primary"
+                      data-member="yousra">Chef Officier Technique</button
+                  >
+                  <button
+                      type="button"
+                      class="btn btn-team btn-primary"
+                      data-member="aziz">Chef de département technique</button
+                  >
+                  <button
+                      type="button"
+                      class="btn btn-team btn-primary"
+                      data-member="yassmine">Chargée de communication</button
+                  >
+                  <button
+                      type="button"
+                      class="btn btn-team btn-primary"
+                      data-member="firdaws">Graphiste</button
+                  >
+              </div>
+          </div>
+      </div>
+
+      <div class="row">
+          <div class="col-lg-12 mb-4 mb-lg-12">
+              <div class="hero-display">
+                  <!-- Separate container for animated text -->
+                  <div class="animated-text-container">
+                      <div class="top-animated-text"></div>
+                  </div>
+
+                  <img
+                      id="hero-image"
+                      src="/img/team/hamza.webp"
+                      class="img-fluid"
+                      alt="Hero Image"
+                      width="100%"
+                      height="100%"
+                      loading="lazy"
+                  />
+                  <div class="hero-text-content-card">
+                      <h2 id="hero-headline" class="h3"></h2>
+                      <p id="hero-description" class="mb-0"></p>
+                  </div>
+
+                  <div class="other-avatars-grid"></div>
+              </div>
+          </div>
+      </div>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+      const tabs = document.querySelectorAll(".btn-team");
+      const heroImage = document.getElementById("hero-image");
+      const heroHeadline = document.getElementById("hero-headline");
+      const heroDescription = document.getElementById("hero-description");
+      const heroDisplay = document.querySelector(".hero-display");
+      const topAnimatedText = document.querySelector(".top-animated-text");
+      const otherAvatarsGrid = document.querySelector(".other-avatars-grid");
+
+      const membersData = {
+          hamza: {
+              name: "HAMZA",
+              headline: "",
+              description:
+                  "Brosmedia, fondée par Hamza après un parcours réussi en programmation et en freelance, propose des solutions digitales complètes : création de sites web, marketing digital et production de contenu. Grâce à sa vision stratégique et son esprit entrepreneurial.",
+              animatedText: "HAMZA, FONDATEUR",
+              image: "/img/team/hamza.webp",
+              cardTitle: "Scalable System Design",
+              cardDescription:
+                  "Discover the principles of creating high-performance, scalable systems that can handle any load.",
+              avatar: "./img/team/avatar/hamza.webp",
+              color: "#c6e7fd",
+              backgroudColor: "#1945ca",
+          },
+          yousra: {
+              name: "Youssra",
+              headline: "",
+              description:
+                  "Après avoir excellé en programmation et acquis une solide expérience technique, Yousra a rejoint son frère Hamza pour co-diriger Brosmedia. Alliant expertise et créativité, elle supervise la direction technique, garantissant la qualité et l’innovation dans chaque projet digital.",
+              animatedText: "Youssra, Chef Officier Technique",
+              image: "/img/team/yousra.webp",
+              cardTitle: "",
+              cardDescription:
+                  "Gain a deeper understanding of your users with a comprehensive toolkit for conducting effective research.",
+              avatar: "./img/team/avatar/yousra.webp",
+              color: "#ffe8e2",
+              backgroudColor: "#e7533b",
+          },
+          aziz: {
+              name: "Abdelaziz",
+              headline: "",
+              description:
+                  "Abdelaziz, Chef de département technique et partenaire clé, supervise l’ensemble des projets de développement pour garantir les plus hauts standards de qualité. Il coordonne les équipes, définit les bonnes pratiques et accompagne les stagiaires en partageant son savoir-faire technique. Son expertise et sa rigueur font de lui un pilier essentiel de Brosmedia.",
+              animatedText: "Abdelaziz, Chef de département technique",
+              image: "/img/team/abdaziz (1).webp",
+              avatar: "/img/team/avatar/aziz.webp",
+              cardTitle: "Product Design Workflow",
+              cardDescription:
+                  "Streamline your design process with Aziz's proven methodologies for efficient product development and successful launches.",
+              color: "#e0d8ff",
+              backgroudColor: "#785fc0",
+          },
+          yassmine: {
+              name: "Yassmine",
+              headline: "",
+              description:
+                  "Yasmin, experte en communication et négociation, est le visage de Brosmedia sur les réseaux sociaux. Elle renforce la présence digitale de l’entreprise, interagit avec les clients et participe aux actions terrain pour élargir le réseau et fidéliser la clientèle.",
+              animatedText: "Yassmine, Chargée de communication",
+              image: "/img/team/yassmine (1).webp",
+              cardTitle: "User Journey Mapping",
+              cardDescription:
+                  "Understand your users better with Yassmine's techniques for mapping out compelling and smooth user journeys and interactions.",
+              avatar: "./img/team/avatar/yassmine.webp",
+              color: "#f3dbe8",
+              backgroudColor: "#ef88c6",
+          },
+          firdaws: {
+              name: "Firdaws",
+              headline: "",
+              description:
+                  "Firdaws, spécialiste en design graphique, UX et SEO, s’est imposée comme un atout majeur après un stage concluant. Son sens analytique et ses observations précises renforcent la qualité et la pertinence de chaque projet mené par Brosmedia.",
+              animatedText: "Firdaws, Graphiste",
+              image: "/img/team/firdaws (1).webp",
+              cardTitle: "",
+              cardDescription:
+                  "Plan and execute your next successful campaign using a robust framework developed by Firdaws.",
+              avatar: "./img/team/avatar/firdaws.webp",
+              color: "#fffddc",
+              backgroudColor: "#faf35f",
+          },
+      };
+
+      const allMemberKeys = Object.keys(membersData);
+
+      const updateContent = (memberKey) => {
+          const data = membersData[memberKey];
+
+          // Animate out
+          heroDisplay.classList.remove("animated");
+
+          heroImage.src = data.image;
+          setTimeout(() => {
+              // Update Hero Section
+              heroHeadline.textContent = data.headline;
+              heroDescription.textContent = data.description;
+              topAnimatedText.textContent = data.animatedText;
+              topAnimatedText.style.backgroundColor = data.color;
+              // Update other avatars grid
+              otherAvatarsGrid.innerHTML = "";
+              allMemberKeys.forEach((key) => {
+                  const avatarItem = document.createElement("div");
+                  avatarItem.classList.add("other-avatar-item");
+                  avatarItem.innerHTML = `<img width="100% height="100%" src="${membersData[key].avatar}" alt="${key} avatar"><span>${membersData[key].name}</span>`;
+
+                  avatarItem.style.backgroundColor =
+                      membersData[key].backgroudColor;
+
+                  // Add click event to switch to this member
+                  avatarItem.addEventListener("click", () => {
+                      tabs.forEach((t) => {
+                          if (t.dataset.member === key) {
+                              t.click();
+                          }
+                      });
+                  });
+
+                  otherAvatarsGrid.appendChild(avatarItem);
+              });
+
+              // Animate in
+              heroDisplay.classList.add("animated");
+          }, 500);
+      };
+
+      tabs.forEach((tab) => {
+          tab.addEventListener("click", (event) => {
+              tabs.forEach((t) => t.classList.remove("active"));
+              event.currentTarget.classList.add("active");
+              const selectedMember = event.currentTarget.dataset.member;
+              updateContent(selectedMember);
+          });
+      });
+
+      // Initial content load
+      updateContent("hamza");
+  });
+</script>
