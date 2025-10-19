@@ -29,7 +29,7 @@
     align-items: center;
     justify-content: center;
 }
-
+ 
 /* Mobile layout (stacked) */
 #services .mobile-layout {
     display: none;

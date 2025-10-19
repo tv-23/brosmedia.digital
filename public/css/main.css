@@ -1194,8 +1194,7 @@ section,
 
 .about .profile .profile-image {
     width: 60px;
-    height: 60px;
-    border-radius: 50%;
+    height: auto;
     object-fit: cover;
 }
 
@@ -1231,6 +1230,7 @@ section,
 .about .contact-info .contact-number {
     font-weight: 600;
     margin: 0;
+    font-size: 14px;
 }
 
 .about .image-wrapper {
@@ -1266,7 +1266,6 @@ section,
     top: 20%;
     left: -10%;
     width: 45%;
-    border: 8px solid var(--surface-color);
 }
 
 @media (max-width: 992px) {

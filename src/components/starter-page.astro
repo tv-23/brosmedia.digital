@@ -21,10 +21,14 @@ export interface Props {
         sectionTitle: string;
         items: Array<string>;
     }>;
+    videoask: Array<{
+        thumb: string;
+        video: string;
+    }>;
     cta: string;
 }
 
-const { title, description, benefits, hero, features, why, cta } = Astro.props;
+const { title, description, benefits, hero, features, why, cta,videoask } = Astro.props;
 ---
 
 <div class="page-title">
@@ -68,6 +72,7 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
 
             <div class="col-lg-4 app-visual-content order-1 order-md-2">
                 <div class="service-box">
+                    <input type="hidden" id="video-url" value={videoask[0].video} />
                     <div class="visual-content" id="visualContentDesktop">
                         <div class="fluid-shape">
                             <div
@@ -78,7 +83,7 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
                                 tabindex="0"
                             >
                                 <img
-                                    src="/img/thumbnail/image.0000002 (1).webp"
+                                    src={videoask[0].thumb}
                                     alt="Video thumbnail"
                                     class="w-100 h-100 video-img"
                                     style="object-fit: cover;"
@@ -257,7 +262,8 @@ const { title, description, benefits, hero, features, why, cta } = Astro.props;
 
             // Create iframe with your VideoAsk URL
             const iframe = document.createElement("iframe");
-            iframe.src = "https://www.videoask.com/fawysaw0m?autoplay=1";
+            
+            iframe.src = document.getElementById('video-url').value;
             iframe.allow =
                 "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
             iframe.className = "w-100 h-100";

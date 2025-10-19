@@ -8,7 +8,7 @@ const benefits = [
         icon: "bi-credit-card", // or "bi-wallet2"
     },
     {
-        text: "Vision claire sur la trésorerie", 
+        text: "Vision claire sur la trésorerie",
         icon: "bi-eye", // or "bi-graph-up"
     },
     {
@@ -62,16 +62,24 @@ const why = [
         sectionTitle: "Pourquoi choisir notre solution club",
         items: [
             "Adaptée à tous types de clubs sportifs",
-            "Interface intuitive et mobile-friendly", 
+            "Interface intuitive et mobile-friendly",
             "Support réactif et personnalisé",
         ],
     },
 ];
 const cta = "Digitalisez votre club dès aujourd’hui !";
+
+const videoask = [
+    {
+        thumb: "/img/apps/Logiciel de gestion de club sportif thumb.webp",
+        video: "https://www.videoask.com/fxzgl4p67",
+    },
+];
 ---
 
 <Layout
-websiteTitle="Logiciel de gestion de club sportif - Brosmedia Digital : Solutions logicielles de gestion pour les entreprises au Maroc">
+    websiteTitle="Logiciel de gestion de club sportif - Brosmedia Digital : Solutions logicielles de gestion pour les entreprises au Maroc"
+>
     <main class="main">
         <StarterPage
             title="Logiciel de gestion de club sportif"
@@ -79,7 +87,8 @@ websiteTitle="Logiciel de gestion de club sportif - Brosmedia Digital : Solution
             hero={hero}
             features={features}
             why={why}
-            cta = {cta}
+            cta={cta}
+            videoask = {videoask}
         />
     </main>
 </Layout>
